@@ -1,3 +1,39 @@
+// --- Autoplay videos ---
+function observeCarouselVideos() {
+  const videos = document.querySelectorAll('#carousel .slide video');
+  if (!videos.length) return;
+  if (window.carouselVideoObserver) {
+    window.carouselVideoObserver.disconnect();
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      const $slide = $(video).closest('.slide');
+      const index = $slide.data('index');
+      const pairedVideos = Array.from(document.querySelectorAll(`#carousel .slide[data-index="${index}"] video`));
+      if (entry.isIntersecting) {
+        pairedVideos.forEach(v => {
+          v.pause();
+          v.currentTime = 0;
+        });
+        // Forzar play asíncrono para evitar bloqueos de autoplay
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {});
+        }
+      } else {
+        pairedVideos.forEach(v => {
+          v.pause();
+          v.currentTime = 0;
+        });
+      }
+    });
+  });
+  window.carouselVideoObserver = observer;
+  videos.forEach(video => {
+    observer.observe(video);
+  });
+}
 // content
 $(document).ready(function () {
   if (!window.content) return;
@@ -26,6 +62,8 @@ $(document).ready(function () {
     $slide.append($media);
     $carousel.append($slide);
   });
+  // Asegurar que los videos recién insertados sean observados
+  observeCarouselVideos();
 
   // header
   $('#last-update').text(c.header.lastUpdate);
@@ -245,35 +283,6 @@ $(function () {
   });
 });
 
-// --- Autoplay videos ---
-document.addEventListener('DOMContentLoaded', function () {
-  const videos = document.querySelectorAll('#carousel .slide video');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const video = entry.target;
-      const $slide = $(video).closest('.slide');
-      const index = $slide.data('index');
-      const pairedVideos = Array.from(document.querySelectorAll(`#carousel .slide[data-index="${index}"] video`));
-
-      if (entry.isIntersecting) {
-        pairedVideos.forEach(v => {
-          v.pause();
-          v.currentTime = 0;
-        });
-        video.play();
-      } else {
-        pairedVideos.forEach(v => {
-          v.pause();
-          v.currentTime = 0;
-        });
-      }
-    });
-  });
-
-  videos.forEach(video => {
-    observer.observe(video);
-  });
-});
 
 // --- Slide index: animación y control ---
 function showActiveSlideIndex(activeIndex) {
