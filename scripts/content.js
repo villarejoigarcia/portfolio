@@ -40,16 +40,16 @@ const content = {
         "Effects"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_gigiros_1.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_2.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_3.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_4.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_5.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_6.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_7.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_1.webp", srcMobile: "images/axvgarcia_gigiros_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_2.webp", srcMobile: "images/axvgarcia_gigiros_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_6.webp", srcMobile: "images/axvgarcia_gigiros_6_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
         { type: "video", src: "images/axvgarcia_gigiros_8.mp4" },
-        { type: "image", src: "images/axvgarcia_gigiros_9.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_10.webp" }
+        { type: "image", src: "images/axvgarcia_gigiros_9.webp", srcMobile: "images/axvgarcia_gigiros_9_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_10.webp", srcMobile: "images/axvgarcia_gigiros_10_1080.webp" }
       ]
     },
     {
@@ -63,15 +63,15 @@ const content = {
         "Effects"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_polbordas_1.webp" },
+        { type: "image", src: "images/axvgarcia_polbordas_1.webp", srcMobile: "images/axvgarcia_polbordas_1_1080.webp" },
         { type: "video", src: "images/axvgarcia_polbordas_2.mp4" },
-        { type: "image", src: "images/axvgarcia_polbordas_3.webp" },
+        { type: "image", src: "images/axvgarcia_polbordas_3.webp", srcMobile: "images/axvgarcia_polbordas_3_1080.webp" },
         { type: "video", src: "images/axvgarcia_polbordas_4.mp4" },
-        { type: "image", src: "images/axvgarcia_polbordas_5.webp" },
+        { type: "image", src: "images/axvgarcia_polbordas_5.webp", srcMobile: "images/axvgarcia_polbordas_5_1080.webp" },
         { type: "video", src: "images/axvgarcia_polbordas_6.mp4" },
-        { type: "image", src: "images/axvgarcia_polbordas_7.webp" },
+        { type: "image", src: "images/axvgarcia_polbordas_7.webp", srcMobile: "images/axvgarcia_polbordas_7_1080.webp" },
         { type: "video", src: "images/axvgarcia_polbordas_8.mp4" },
-        { type: "image", src: "images/axvgarcia_polbordas_9.webp" },
+        { type: "image", src: "images/axvgarcia_polbordas_9.webp", srcMobile: "images/axvgarcia_polbordas_9_1080.webp" },
         { type: "video", src: "images/axvgarcia_polbordas_10.mp4" }
       ]
     },
@@ -84,11 +84,11 @@ const content = {
         "Code"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp" },
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_2.webp" },
+        { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp", srcMobile: "images/axvgarcia_lesveusdelavall_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_lesveusdelavall_2.webp", srcMobile: "images/axvgarcia_lesveusdelavall_2_1080.webp" },
         { type: "video", src: "images/axvgarcia_lesveusdelavall_3.mp4" },
         { type: "video", src: "images/axvgarcia_lesveusdelavall_4.mp4" },
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_5.gif" }
+        { type: "image", src: "images/axvgarcia_lesveusdelavall_5.gif", srcMobile: "images/axvgarcia_lesveusdelavall_5_1080.gif" }
       ]
     },
     {
@@ -99,10 +99,10 @@ const content = {
         "Code"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_sergirabasa_1.webp" },
-        { type: "image", src: "images/axvgarcia_sergirabasa_2.webp" },
-        { type: "image", src: "images/axvgarcia_sergirabasa_3.webp" },
-        { type: "image", src: "images/axvgarcia_sergirabasa_4.webp" }
+        { type: "image", src: "images/axvgarcia_sergirabasa_1.webp", srcMobile: "images/axvgarcia_sergirabasa_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_sergirabasa_2.webp", srcMobile: "images/axvgarcia_sergirabasa_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_sergirabasa_3.webp", srcMobile: "images/axvgarcia_sergirabasa_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_sergirabasa_4.webp", srcMobile: "images/axvgarcia_sergirabasa_4_1080.webp" }
       ]
     },
     {
@@ -115,10 +115,10 @@ const content = {
         "Credits"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_marianatambe_1.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_2.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_3.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_4.webp" }
+        { type: "image", src: "images/axvgarcia_marianatambe_1.webp", srcMobile: "images/axvgarcia_marianatambe_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_marianatambe_2.webp", srcMobile: "images/axvgarcia_marianatambe_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_marianatambe_3.webp", srcMobile: "images/axvgarcia_marianatambe_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_marianatambe_4.webp", srcMobile: "images/axvgarcia_marianatambe_4_1080.webp" }
       ]
     },
     {
@@ -130,10 +130,10 @@ const content = {
         "Identity"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_ianabecasis_1.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_2.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_3.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_4.webp" }
+        { type: "image", src: "images/axvgarcia_ianabecasis_1.webp", srcMobile: "images/axvgarcia_ianabecasis_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_ianabecasis_2.webp", srcMobile: "images/axvgarcia_ianabecasis_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_ianabecasis_3.webp", srcMobile: "images/axvgarcia_ianabecasis_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_ianabecasis_4.webp", srcMobile: "images/axvgarcia_ianabecasis_4_1080.webp" }
       ]
     },
     {
@@ -143,9 +143,9 @@ const content = {
         "Graphic design"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_festamajordemussa_1.gif" },
-        { type: "image", src: "images/axvgarcia_festamajordemussa_2.webp" },
-        { type: "image", src: "images/axvgarcia_festamajordemussa_3.webp" }
+        { type: "image", src: "images/axvgarcia_festamajordemussa_1.gif", srcMobile: "images/axvgarcia_festamajordemussa_1_1080.gif" },
+        { type: "image", src: "images/axvgarcia_festamajordemussa_2.webp", srcMobile: "images/axvgarcia_festamajordemussa_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_festamajordemussa_3.webp", srcMobile: "images/axvgarcia_festamajordemussa_3_1080.webp" }
       ]
     },
     {
@@ -157,10 +157,10 @@ const content = {
         "Identity"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_1.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_2.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_3.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_4.webp" }
+        { type: "image", src: "images/axvgarcia_elcortaldelgral_1.webp", srcMobile: "images/axvgarcia_elcortaldelgral_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_elcortaldelgral_2.webp", srcMobile: "images/axvgarcia_elcortaldelgral_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_elcortaldelgral_3.webp", srcMobile: "images/axvgarcia_elcortaldelgral_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_elcortaldelgral_4.webp", srcMobile: "images/axvgarcia_elcortaldelgral_4_1080.webp" }
       ]
     },
     {
@@ -173,13 +173,13 @@ const content = {
         "Credits"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_lenais_1.webp" },
-        { type: "image", src: "images/axvgarcia_lenais_2.webp" },
+        { type: "image", src: "images/axvgarcia_lenais_1.webp", srcMobile: "images/axvgarcia_lenais_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_lenais_2.webp", srcMobile: "images/axvgarcia_lenais_2_1080.webp" },
         { type: "video", src: "images/axvgarcia_lenais_3.mp4" },
-        { type: "image", src: "images/axvgarcia_lenais_4.webp" },
-        { type: "image", src: "images/axvgarcia_lenais_5.gif" },
-        { type: "image", src: "images/axvgarcia_lenais_6.webp" },
-        { type: "image", src: "images/axvgarcia_lenais_7.webp" }
+        { type: "image", src: "images/axvgarcia_lenais_4.webp", srcMobile: "images/axvgarcia_lenais_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_lenais_5.gif", srcMobile: "images/axvgarcia_lenais_5_1080.gif" },
+        { type: "image", src: "images/axvgarcia_lenais_6.webp", srcMobile: "images/axvgarcia_lenais_6_1080.webp" },
+        { type: "image", src: "images/axvgarcia_lenais_7.webp", srcMobile: "images/axvgarcia_lenais_7_1080.webp" }
       ]
     },
     {
@@ -191,16 +191,16 @@ const content = {
         "Code"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_entorns_1.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_2.gif" },
-        { type: "image", src: "images/axvgarcia_entorns_3.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_4.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_5.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_6.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_7.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_8.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_9.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_10.webp" }
+        { type: "image", src: "images/axvgarcia_entorns_1.webp", srcMobile: "images/axvgarcia_entorns_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_2.gif", srcMobile: "images/axvgarcia_entorns_2_1080.gif" },
+        { type: "image", src: "images/axvgarcia_entorns_3.webp", srcMobile: "images/axvgarcia_entorns_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_4.webp", srcMobile: "images/axvgarcia_entorns_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_5.webp", srcMobile: "images/axvgarcia_entorns_5_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_6.webp", srcMobile: "images/axvgarcia_entorns_6_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_7.webp", srcMobile: "images/axvgarcia_entorns_7_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_8.webp", srcMobile: "images/axvgarcia_entorns_8_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_9.webp", srcMobile: "images/axvgarcia_entorns_9_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_10.webp", srcMobile: "images/axvgarcia_entorns_10_1080.webp" }
       ]
     },
     {
@@ -210,9 +210,9 @@ const content = {
         "Identity"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_muyinestable_1.webp" },
-        { type: "image", src: "images/axvgarcia_muyinestable_2.gif" },
-        { type: "image", src: "images/axvgarcia_muyinestable_3.webp" }
+        { type: "image", src: "images/axvgarcia_muyinestable_1.webp", srcMobile: "images/axvgarcia_muyinestable_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_muyinestable_2.gif", srcMobile: "images/axvgarcia_muyinestable_2_1080.gif" },
+        { type: "image", src: "images/axvgarcia_muyinestable_3.webp", srcMobile: "images/axvgarcia_muyinestable_3_1080.webp" }
       ]
     },
     {
@@ -224,10 +224,10 @@ const content = {
         "Credits"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_arianaabecasis_1.webp" },
+        { type: "image", src: "images/axvgarcia_arianaabecasis_1.webp", srcMobile: "images/axvgarcia_arianaabecasis_1_1080.webp" },
         { type: "video", src: "images/axvgarcia_arianaabecasis_2.mp4" },
-        { type: "image", src: "images/axvgarcia_arianaabecasis_3.gif" },
-        { type: "image", src: "images/axvgarcia_arianaabecasis_4.webp" }
+        { type: "image", src: "images/axvgarcia_arianaabecasis_3.gif", srcMobile: "images/axvgarcia_arianaabecasis_3_1080.gif" },
+        { type: "image", src: "images/axvgarcia_arianaabecasis_4.webp", srcMobile: "images/axvgarcia_arianaabecasis_4_1080.webp" }
       ]
     },
     {
@@ -239,10 +239,10 @@ const content = {
         "Identity"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_22skyworkspace_1.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_3.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_4.webp" }
+        { type: "image", src: "images/axvgarcia_22skyworkspace_1.webp", srcMobile: "images/axvgarcia_22skyworkspace_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp", srcMobile: "images/axvgarcia_22skyworkspace_2_1080.webp" },
+        { type: "image", src: "images/axvgarcia_22skyworkspace_3.webp", srcMobile: "images/axvgarcia_22skyworkspace_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_22skyworkspace_4.webp", srcMobile: "images/axvgarcia_22skyworkspace_4_1080.webp" }
       ]
     }
   ]

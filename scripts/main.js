@@ -11,7 +11,14 @@ $(document).ready(function () {
     const $media = $('<div>').addClass('media');
     project.media && project.media.forEach(m => {
       if (m.type === 'image') {
-        $media.append($('<img>').attr('src', m.src).attr('alt', project.client));
+        if (m.srcMobile) {
+          const $picture = $('<picture>');
+          $picture.append($('<source>').attr('srcset', m.srcMobile).attr('media', '(max-width: 600px)'));
+          $picture.append($('<img>').attr('src', m.src).attr('alt', project.client));
+          $media.append($picture);
+        } else {
+          $media.append($('<img>').attr('src', m.src).attr('alt', project.client));
+        }
       } else if (m.type === 'video') {
         $media.append($('<video>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
       }
@@ -137,7 +144,7 @@ $(function () {
     // En mobile, siempre cambia la imagen
     if (isMobile()) {
       $allSameSlides.each(function () {
-        const $media = $(this).find('img, video');
+        const $media = $(this).find('picture, video');
         const $visible = $media.filter(':visible');
         let nextIndex = $media.index($visible) + 1;
         if (nextIndex >= $media.length) nextIndex = 0;
@@ -181,7 +188,7 @@ $(function () {
     } else {
       // Segundo clic (y siguientes): cambiar imagen
       $allSameSlides.each(function () {
-        const $media = $(this).find('img, video');
+        const $media = $(this).find('picture, video');
         const $visible = $media.filter(':visible');
         let nextIndex = $media.index($visible) + 1;
         if (nextIndex >= $media.length) nextIndex = 0;
@@ -208,7 +215,7 @@ $(function () {
     $slides.each(function () {
       const index = $(this).data('index');
       const $allSameSlides = $wrapper.find(`.slide[data-index="${index}"]`);
-      const $media = $(this).find('img, video');
+      const $media = $(this).find('picture, video');
       const mediaLen = $media.length;
       
       if (mediaLen > 0) {
@@ -216,8 +223,8 @@ $(function () {
         
         // Oculta todas las imágenes/videos y muestra solo la aleatoria
         $allSameSlides.each(function () {
-          $(this).find('img, video').hide();
-          $(this).find('img, video').eq(randomIndex).show();
+          $(this).find('picture, video').hide();
+          $(this).find('picture, video').eq(randomIndex).show();
         });
       }
     });

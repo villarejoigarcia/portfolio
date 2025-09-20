@@ -251,7 +251,7 @@ body::-webkit-scrollbar {
 	align-items: center;
 }
 
-.media img:not(:first-child),
+.media picture:not(:first-child),
 .media video:not(:first-child) {
 	display: none;
 }
