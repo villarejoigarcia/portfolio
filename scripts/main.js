@@ -15,6 +15,7 @@ function observeCarouselVideos() {
           v.currentTime = 0;
         });
         video.play();
+        video.muted = true;
       } else {
         pairedVideos.forEach(v => {
           v.pause();
