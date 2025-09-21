@@ -1,26 +1,20 @@
 // --- Autoplay videos ---
 function observeCarouselVideos() {
+  // --- Autoplay videos ---
   const videos = document.querySelectorAll('#carousel .slide video');
-  if (!videos.length) return;
-  if (window.carouselVideoObserver) {
-    window.carouselVideoObserver.disconnect();
-  }
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
       const $slide = $(video).closest('.slide');
       const index = $slide.data('index');
       const pairedVideos = Array.from(document.querySelectorAll(`#carousel .slide[data-index="${index}"] video`));
+
       if (entry.isIntersecting) {
         pairedVideos.forEach(v => {
           v.pause();
           v.currentTime = 0;
         });
-        // Forzar play asíncrono para evitar bloqueos de autoplay
-        const playPromise = video.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(() => {});
-        }
+        video.play();
       } else {
         pairedVideos.forEach(v => {
           v.pause();
@@ -29,7 +23,7 @@ function observeCarouselVideos() {
       }
     });
   });
-  window.carouselVideoObserver = observer;
+
   videos.forEach(video => {
     observer.observe(video);
   });
