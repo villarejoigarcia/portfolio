@@ -402,12 +402,23 @@ function updateSlideIndexOnScroll() {
 
   const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-  if (isMobile && scrollTop + containerHeight >= scrollHeight - 1) {
+  if (isMobile) {
+    const firstIndex = 0;
     const lastIndex = items.length - 1;
-    if (lastActiveIndex !== lastIndex) {
-      showActiveSlideIndex(lastIndex);
+
+    if (scrollTop <= 50) {
+      if (lastActiveIndex !== firstIndex) {
+        showActiveSlideIndex(firstIndex);
+      }
+      return;
     }
-    return;
+
+    if (scrollTop + containerHeight >= scrollHeight - 50) {
+      if (lastActiveIndex !== lastIndex) {
+        showActiveSlideIndex(lastIndex);
+      }
+      return;
+    }
   }
 
   $slides.each(function (i, el) {
