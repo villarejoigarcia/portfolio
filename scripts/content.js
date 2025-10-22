@@ -30,6 +30,33 @@ const content = {
   projects: [
     {
       year: "2025",
+      client: "Antex",
+      services: [
+        "Creative direction",
+        "Art direction",
+        "Production"
+      ],
+      media: [
+        { type: "image", src: "images/villarejoigarcia_antex_1.webp", srcMobile: "images/villarejoigarcia_antex_1_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_2.webp", srcMobile: "images/villarejoigarcia_antex_2_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_3.webp", srcMobile: "images/villarejoigarcia_antex_3_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_4.webp", srcMobile: "images/villarejoigarcia_antex_4_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_5.webp", srcMobile: "images/villarejoigarcia_antex_5_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_6.webp", srcMobile: "images/villarejoigarcia_antex_6_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_7.webp", srcMobile: "images/villarejoigarcia_antex_7_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_8.webp", srcMobile: "images/villarejoigarcia_antex_8_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_9.webp", srcMobile: "images/villarejoigarcia_antex_9_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_10.webp", srcMobile: "images/villarejoigarcia_antex_10_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_11.webp", srcMobile: "images/villarejoigarcia_antex_11_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_12.webp", srcMobile: "images/villarejoigarcia_antex_12_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_13.webp", srcMobile: "images/villarejoigarcia_antex_13_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_14.webp", srcMobile: "images/villarejoigarcia_antex_14_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_15.webp", srcMobile: "images/villarejoigarcia_antex_15_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_16.webp", srcMobile: "images/villarejoigarcia_antex_16_1080.webp" }
+      ]
+    },
+    {
+      year: "2025",
       client: "Gigi Ros",
       services: [
         "Graphic design",
@@ -213,21 +240,6 @@ const content = {
         { type: "image", src: "images/axvgarcia_muyinestable_1.webp", srcMobile: "images/axvgarcia_muyinestable_1_1080.webp" },
         { type: "image", src: "images/axvgarcia_muyinestable_2.gif", srcMobile: "images/axvgarcia_muyinestable_2_1080.gif" },
         { type: "image", src: "images/axvgarcia_muyinestable_3.webp", srcMobile: "images/axvgarcia_muyinestable_3_1080.webp" }
-      ]
-    },
-    {
-      year: "2021",
-      client: "Ariana Abecasis",
-      services: [
-        "Graphic design",
-        "Cover artwork",
-        "Credits"
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_arianaabecasis_1.webp", srcMobile: "images/axvgarcia_arianaabecasis_1_1080.webp" },
-        { type: "video", src: "images/axvgarcia_arianaabecasis_2.mp4" },
-        { type: "image", src: "images/axvgarcia_arianaabecasis_3.gif", srcMobile: "images/axvgarcia_arianaabecasis_3_1080.gif" },
-        { type: "image", src: "images/axvgarcia_arianaabecasis_4.webp", srcMobile: "images/axvgarcia_arianaabecasis_4_1080.webp" }
       ]
     },
     {

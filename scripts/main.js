@@ -278,7 +278,6 @@ $(function () {
   });
 });
 
-
 // --- Slide index: animación y control ---
 function showActiveSlideIndex(activeIndex) {
   let items = $('#slide-index > div');
