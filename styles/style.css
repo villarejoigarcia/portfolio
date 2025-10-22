@@ -241,6 +241,9 @@ body::-webkit-scrollbar {
 	gap: 2px;
 	align-items: start;
 	cursor: e-resize;
+}
+
+.slide:not(:last-child) {
 	padding-bottom: 3px;
 }
 

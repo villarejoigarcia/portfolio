@@ -151,21 +151,24 @@ $(function () {
 
   // Scroll infinito solo hacia abajo con buffer fijo
   $container.on('scroll', function () {
-    if (!clonesAdded) {
-      $originalSlides.clone(true).addClass('clone').appendTo($wrapper);
-      clonesAdded = true;
+
+    if (window.innerWidth >= 1024) {
+      if (!clonesAdded) {
+        $originalSlides.clone(true).addClass('clone').appendTo($wrapper);
+        clonesAdded = true;
+        recalcHeights();
+      }
       recalcHeights();
-    }
-    recalcHeights();
 
-    const scrollTop = $container.scrollTop();
-    if (justTeleported) return;
+      const scrollTop = $container.scrollTop();
+      if (justTeleported) return;
 
-    const totalHeight = recalcHeights();
-    if (scrollTop > totalHeight) {
-      justTeleported = true;
-      $container.scrollTop(scrollTop - totalHeight - 3);
-      setTimeout(() => { justTeleported = false; }, 500);
+      const totalHeight = recalcHeights();
+      if (scrollTop > totalHeight) {
+        justTeleported = true;
+        $container.scrollTop(scrollTop - totalHeight - 3);
+        setTimeout(() => { justTeleported = false; }, 500);
+      }
     }
   });
 
@@ -385,12 +388,27 @@ function showActiveSlideIndex(activeIndex) {
 
 function updateSlideIndexOnScroll() {
   if (isIndexAnimating || isDataHovering) return;
+
   const $container = $('#carousel-container');
   const $slides = $('#carousel .slide');
+  const items = $('#slide-index > div');
+
   let scrollTop = $container.scrollTop();
+  let containerHeight = $container.innerHeight();
+  let scrollHeight = $container[0].scrollHeight;
   let accumulated = 0;
   let activeIndex = 0;
   let middleScreen = scrollTop + window.innerHeight / 2;
+
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+  if (isMobile && scrollTop + containerHeight >= scrollHeight - 1) {
+    const lastIndex = items.length - 1;
+    if (lastActiveIndex !== lastIndex) {
+      showActiveSlideIndex(lastIndex);
+    }
+    return;
+  }
 
   $slides.each(function (i, el) {
     accumulated += $(el).outerHeight(true);
@@ -399,7 +417,8 @@ function updateSlideIndexOnScroll() {
       return false;
     }
   });
-  showActiveSlideIndex(activeIndex % $('#slide-index > div').length);
+
+  showActiveSlideIndex(activeIndex % items.length);
 }
 
 $('#carousel-container').on('scroll', updateSlideIndexOnScroll);

@@ -252,9 +252,7 @@ const content = {
       ],
       media: [
         { type: "image", src: "images/axvgarcia_22skyworkspace_1.webp", srcMobile: "images/axvgarcia_22skyworkspace_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp", srcMobile: "images/axvgarcia_22skyworkspace_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_3.webp", srcMobile: "images/axvgarcia_22skyworkspace_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_4.webp", srcMobile: "images/axvgarcia_22skyworkspace_4_1080.webp" }
+        { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp", srcMobile: "images/axvgarcia_22skyworkspace_2_1080.webp" }
       ]
     }
   ]
