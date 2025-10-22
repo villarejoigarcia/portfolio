@@ -406,14 +406,14 @@ function updateSlideIndexOnScroll() {
     const firstIndex = 0;
     const lastIndex = items.length - 1;
 
-    if (scrollTop <= 50) {
+    if (scrollTop <= 1) {
       if (lastActiveIndex !== firstIndex) {
         showActiveSlideIndex(firstIndex);
       }
       return;
     }
 
-    if (scrollTop + containerHeight >= scrollHeight - 50) {
+    if (scrollTop + containerHeight >= scrollHeight - 1) {
       if (lastActiveIndex !== lastIndex) {
         showActiveSlideIndex(lastIndex);
       }
