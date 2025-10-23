@@ -91,11 +91,10 @@ const content = {
       year: "2024",
       client: "Pol Bordas",
       services: [
-        "Art direction",
-        "Graphic design",
         "Visuals",
+        "Graphic design",
+        "Effects",
         "Motion",
-        "Effects"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_polbordas_1.webp", srcMobile: "images/axvgarcia_polbordas_1_1080.webp" },
@@ -144,9 +143,8 @@ const content = {
       year: "2023",
       client: "Mariana També",
       services: [
-        "Art direction",
-        "Graphic design",
         "Cover artwork",
+        "Graphic design",
         "Credits"
       ],
       media: [
@@ -202,9 +200,9 @@ const content = {
       year: "2023",
       client: "Le Nais",
       services: [
-        "Graphic design",
+        "Vinyl",
         "Cover artwork",
-        "Vinyl design",
+        "Graphic design",
         "Credits"
       ],
       media: [
