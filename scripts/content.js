@@ -82,10 +82,25 @@ const content = {
       ],
       media: [
         { type: "image", src: "images/axvgarcia_gigiros_6.webp", srcMobile: "images/axvgarcia_gigiros_6_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
+      ]
+    },
+    {
+      year: "2024",
+      client: "Guillem Marí",
+      services: [
+        "Editorial",
+        "Identity"
+      ],
+      media: [
+        { type: "image", src: "images/villarejoigarcia_lesmonades_1.webp", srcMobile: "images/villarejoigarcia_lesmonades_1_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_lesmonades_2.webp", srcMobile: "images/villarejoigarcia_lesmonades_2_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_lesmonades_3.webp", srcMobile: "images/villarejoigarcia_lesmonades_3_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_lesmonades_4.webp", srcMobile: "images/villarejoigarcia_lesmonades_4_1080.webp" },
+        { type: "image", src: "images/villarejoigarcia_lesmonades_5.webp", srcMobile: "images/villarejoigarcia_lesmonades_5_1080.webp" }
       ]
     },
     {
