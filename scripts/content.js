@@ -59,24 +59,32 @@ const content = {
       year: "2025",
       client: "Gigi Ros",
       services: [
-        "Graphic design",
-        "Cover artwork",
-        "Vinyl design",
         "Visuals",
+        "Effects",
         "Motion",
-        "Effects"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_gigiros_1.webp", srcMobile: "images/axvgarcia_gigiros_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_2.webp", srcMobile: "images/axvgarcia_gigiros_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
+        { type: "video", src: "images/villarejoigarcia_gigiros_1.mp4" },
+        { type: "video", src: "images/villarejoigarcia_gigiros_2.mp4" },
+        { type: "video", src: "images/villarejoigarcia_gigiros_3.mp4" },
+        { type: "video", src: "images/villarejoigarcia_gigiros_4.mp4" },
+        { type: "video", src: "images/villarejoigarcia_gigiros_5.mp4" }
+      ]
+    },
+    {
+      year: "2025",
+      client: "Gigi Ros",
+      services: [
+        "Vinyl",
+        "Cover artwork",
+        "Graphic design"
+      ],
+      media: [
         { type: "image", src: "images/axvgarcia_gigiros_6.webp", srcMobile: "images/axvgarcia_gigiros_6_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
-        { type: "video", src: "images/axvgarcia_gigiros_8.mp4" },
-        { type: "image", src: "images/axvgarcia_gigiros_9.webp", srcMobile: "images/axvgarcia_gigiros_9_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_10.webp", srcMobile: "images/axvgarcia_gigiros_10_1080.webp" }
+        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
       ]
     },
     {
