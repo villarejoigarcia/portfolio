@@ -185,8 +185,16 @@ main {
 	cursor: pointer;
 }
 
-#slide-index>*.hover * {
+/* #slide-index>*.hover * {
 	color: var(--dark-grey);
+} */
+
+#slide-index>*:not(.active) * {
+	color: var(--dark-grey);
+}
+ 
+#slide-index>*:hover * {
+	color: black;
 }
 
 #fields>*,
