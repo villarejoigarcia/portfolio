@@ -76,7 +76,7 @@ const content = {
         "Motion",
       ],
       media: [
-        // { type: "image", src: "images/villarejoigarcia_gigiros_1.webp", srcMobile: "images/villarejoigarcia_gigiros_1.webp" },
+        { type: "image", src: "images/villarejoigarcia_gigiros_1.webp", srcMobile: "images/villarejoigarcia_gigiros_1.webp" },
         { type: "video", src: "images/villarejoigarcia_gigiros_1.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_2.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_3.mp4" },

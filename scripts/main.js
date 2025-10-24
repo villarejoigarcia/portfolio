@@ -14,8 +14,8 @@ function observeCarouselVideos() {
           v.pause();
           v.currentTime = 0;
         });
-        video.play();
         video.muted = true;
+        video.play();
       } else {
         pairedVideos.forEach(v => {
           v.pause();
@@ -54,7 +54,7 @@ $(document).ready(function () {
           $media.append($picture);
         }
       } else if (m.type === 'video') {
-        $media.append($('<video>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
+        $media.append($('<video autoplay muted loop playsinline>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
       }
     });
     $slide.append($media);
