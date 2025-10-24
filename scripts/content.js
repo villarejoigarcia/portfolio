@@ -37,22 +37,22 @@ const content = {
         "Production"
       ],
       media: [
-        { type: "image", src: "images/villarejoigarcia_antex_1.webp", srcMobile: "images/villarejoigarcia_antex_1_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_2.webp", srcMobile: "images/villarejoigarcia_antex_2_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_3.webp", srcMobile: "images/villarejoigarcia_antex_3_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_4.webp", srcMobile: "images/villarejoigarcia_antex_4_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_5.webp", srcMobile: "images/villarejoigarcia_antex_5_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_6.webp", srcMobile: "images/villarejoigarcia_antex_6_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_7.webp", srcMobile: "images/villarejoigarcia_antex_7_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_8.webp", srcMobile: "images/villarejoigarcia_antex_8_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_9.webp", srcMobile: "images/villarejoigarcia_antex_9_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_10.webp", srcMobile: "images/villarejoigarcia_antex_10_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_11.webp", srcMobile: "images/villarejoigarcia_antex_11_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_12.webp", srcMobile: "images/villarejoigarcia_antex_12_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_13.webp", srcMobile: "images/villarejoigarcia_antex_13_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_14.webp", srcMobile: "images/villarejoigarcia_antex_14_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_15.webp", srcMobile: "images/villarejoigarcia_antex_15_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_antex_16.webp", srcMobile: "images/villarejoigarcia_antex_16_1080.webp" }
+        { type: "image", src: "images/villarejoigarcia_antex_1.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_2.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_3.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_4.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_5.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_6.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_7.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_8.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_9.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_10.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_11.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_12.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_13.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_14.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_15.webp" },
+        { type: "image", src: "images/villarejoigarcia_antex_16.webp" }
       ]
     },
     // {
@@ -93,11 +93,11 @@ const content = {
         "Graphic design"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_gigiros_6.webp", srcMobile: "images/axvgarcia_gigiros_6_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_3.webp", srcMobile: "images/axvgarcia_gigiros_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_7.webp", srcMobile: "images/axvgarcia_gigiros_7_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_4.webp", srcMobile: "images/axvgarcia_gigiros_4_1080.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_5.webp", srcMobile: "images/axvgarcia_gigiros_5_1080.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_6.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_3.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_7.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_4.webp" },
+        { type: "image", src: "images/axvgarcia_gigiros_5.webp" },
       ]
     },
     {
@@ -147,7 +147,7 @@ const content = {
         "Code"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp", srcMobile: "images/axvgarcia_lesveusdelavall_1_1080.webp" },
+        { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp" },
         { type: "image", src: "images/axvgarcia_lesveusdelavall_2.webp", srcMobile: "images/axvgarcia_lesveusdelavall_2_1080.webp" },
         { type: "video", src: "images/axvgarcia_lesveusdelavall_3.mp4" },
         { type: "video", src: "images/axvgarcia_lesveusdelavall_4.mp4" },

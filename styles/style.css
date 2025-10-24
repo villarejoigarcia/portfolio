@@ -319,4 +319,9 @@ body::-webkit-scrollbar {
 		padding-right: 2px;
 	}
 
+	.indent,
+	#slide-index>*>* {
+		margin-left: 16px;
+	}
+
 }

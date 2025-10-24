@@ -48,7 +48,10 @@ $(document).ready(function () {
           $picture.append($('<img>').attr('src', m.src).attr('alt', project.client));
           $media.append($picture);
         } else {
-          $media.append($('<img>').attr('src', m.src).attr('alt', project.client));
+          // $media.append($('<img>').attr('src', m.src).attr('alt', project.client));
+          const $picture = $('<picture>');
+          $picture.append($('<img>').attr('src', m.src).attr('alt', project.client));
+          $media.append($picture);
         }
       } else if (m.type === 'video') {
         $media.append($('<video>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
