@@ -189,12 +189,16 @@ main {
 	color: var(--dark-grey);
 } */
 
-#slide-index>*:not(.active) * {
+/* #slide-index>* * {
+	color: black;
+} */
+
+#slide-index:hover >*:not(.active) * {
 	color: var(--dark-grey);
 }
  
 #slide-index>*:hover * {
-	color: black;
+	color: black !important;
 }
 
 #fields>*,
