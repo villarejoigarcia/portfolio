@@ -55,6 +55,18 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_antex_16.webp", srcMobile: "images/villarejoigarcia_antex_16_1080.webp" }
       ]
     },
+    // {
+    //   year: "Soon",
+    //   client: "Carmen House",
+    //   services: [
+    //     "Web",
+    //     "Code",
+    //     "with Alfred Llorca",
+    //   ],
+    //   media: [
+    //     { type: "video", src: "images/villarejoigarcia_carmenhouse_1.mp4" },
+    //   ]
+    // },
     {
       year: "2025",
       client: "Gigi Ros",
@@ -100,7 +112,8 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_lesmonades_2.webp", srcMobile: "images/villarejoigarcia_lesmonades_2_1080.webp" },
         { type: "image", src: "images/villarejoigarcia_lesmonades_3.webp", srcMobile: "images/villarejoigarcia_lesmonades_3_1080.webp" },
         { type: "image", src: "images/villarejoigarcia_lesmonades_4.webp", srcMobile: "images/villarejoigarcia_lesmonades_4_1080.webp" },
-        { type: "image", src: "images/villarejoigarcia_lesmonades_5.webp", srcMobile: "images/villarejoigarcia_lesmonades_5_1080.webp" }
+        { type: "image", src: "images/villarejoigarcia_lesmonades_5.webp", srcMobile: "images/villarejoigarcia_lesmonades_5_1080.webp" },
+        { type: "video", src: "images/villarejoigarcia_lesmonades_1.mp4" },
       ]
     },
     {

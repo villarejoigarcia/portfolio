@@ -243,6 +243,22 @@ body::-webkit-scrollbar {
 	cursor: e-resize;
 }
 
+/* .slide[data-index="1"] .media {
+	overflow: hidden;
+}
+
+.slide[data-index="1"] img,
+.slide[data-index="1"] video {
+	max-height: 20vh;
+	filter: blur(20px);
+	overflow: hidden;
+	opacity: .5;
+}
+
+#slide-index>*:nth-child(2) .more>*:last-child {
+	font-family: 'Affairs-Italic';
+} */
+
 .slide:not(:last-child) {
 	padding-bottom: 3px;
 }
