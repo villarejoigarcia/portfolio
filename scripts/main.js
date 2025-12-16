@@ -23,7 +23,7 @@ function observeCarouselVideos() {
       }
     });
   }, {
-    threshold: .1
+    threshold: .05
   });
 
   videos.forEach(video => observer.observe(video));
@@ -53,7 +53,7 @@ $(document).ready(function () {
           $media.append($picture);
         }
       } else if (m.type === 'video') {
-        $media.append($('<video>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
+        $media.append($('<video>').attr({src: m.src, preload: 'auto', muted: true, loop: true, playsinline: true, alt: project.client}));
       }
     });
     $slide.append($media);
@@ -61,6 +61,16 @@ $(document).ready(function () {
   });
   // Asegurar que los videos recién insertados sean observados
   observeCarouselVideos();
+
+  setTimeout(() => {
+  const firstVisible = document
+    .querySelector('#carousel .slide video');
+
+  if (firstVisible) {
+    firstVisible.muted = true;
+    firstVisible.play().catch(() => {});
+  }
+}, 100);
 
   // header
   $('#last-update').text(c.header.lastUpdate);
