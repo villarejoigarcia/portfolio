@@ -30,6 +30,24 @@ const content = {
   projects: [
     {
       year: "2025",
+      client: "Carmen House",
+      services: [
+        "Web",
+        "Code",
+      ],
+      media: [
+        { type: "video", src: "images/carmenhouse_1.webm" },
+        { type: "video", src: "images/carmenhouse_2.webm" },
+        { type: "video", src: "images/carmenhouse_3.webm" },
+        { type: "video", src: "images/carmenhouse_4.webm" },
+        { type: "video", src: "images/carmenhouse_5.webm" },
+        { type: "video", src: "images/carmenhouse_6.webm" },
+        { type: "video", src: "images/carmenhouse_7.webm" },
+        { type: "video", src: "images/carmenhouse_8.webm" },
+      ]
+    },
+    {
+      year: "2025",
       client: "Antex",
       services: [
         "Creative direction",
@@ -55,18 +73,6 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_antex_16.webp" }
       ]
     },
-    // {
-    //   year: "Soon",
-    //   client: "Carmen House",
-    //   services: [
-    //     "Web",
-    //     "Code",
-    //     "with Alfred Llorca",
-    //   ],
-    //   media: [
-    //     { type: "video", src: "images/villarejoigarcia_carmenhouse_1.mp4" },
-    //   ]
-    // },
     {
       year: "2025",
       client: "Gigi Ros",
@@ -76,7 +82,7 @@ const content = {
         "Motion",
       ],
       media: [
-        { type: "image", src: "images/villarejoigarcia_gigiros_1.webp", srcMobile: "images/villarejoigarcia_gigiros_1_1080.webp" },
+        // { type: "image", src: "images/villarejoigarcia_gigiros_1.webp", srcMobile: "images/villarejoigarcia_gigiros_1_1080.webp" },
         { type: "video", src: "images/villarejoigarcia_gigiros_1.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_2.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_3.mp4" },
@@ -277,19 +283,19 @@ const content = {
         { type: "image", src: "images/axvgarcia_muyinestable_3.webp", srcMobile: "images/axvgarcia_muyinestable_3_1080.webp" }
       ]
     },
-    {
-      year: "2019",
-      client: "22 Sky Workspace",
-      services: [
-        "Web",
-        "Code",
-        "Identity"
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_22skyworkspace_1.webp", srcMobile: "images/axvgarcia_22skyworkspace_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp", srcMobile: "images/axvgarcia_22skyworkspace_2_1080.webp" }
-      ]
-    }
+    // {
+    //   year: "2019",
+    //   client: "22 Sky Workspace",
+    //   services: [
+    //     "Web",
+    //     "Code",
+    //     "Identity"
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_22skyworkspace_1.webp", srcMobile: "images/axvgarcia_22skyworkspace_1_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_22skyworkspace_2.webp", srcMobile: "images/axvgarcia_22skyworkspace_2_1080.webp" }
+    //   ]
+    // }
   ]
 };
 

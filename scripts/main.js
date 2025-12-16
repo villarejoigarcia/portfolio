@@ -1,33 +1,32 @@
 // --- Autoplay videos ---
 function observeCarouselVideos() {
-  // --- Autoplay videos ---
   const videos = document.querySelectorAll('#carousel .slide video');
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       const video = entry.target;
-      const $slide = $(video).closest('.slide');
-      const index = $slide.data('index');
-      const pairedVideos = Array.from(document.querySelectorAll(`#carousel .slide[data-index="${index}"] video`));
 
       if (entry.isIntersecting) {
-        pairedVideos.forEach(v => {
-          v.pause();
-          v.currentTime = 0;
+        // Pausar TODOS los demás
+        videos.forEach(v => {
+          if (v !== video) {
+            v.pause();
+            v.currentTime = 0;
+          }
         });
+
         video.muted = true;
-        video.play();
+        video.play().catch(() => {});
       } else {
-        pairedVideos.forEach(v => {
-          v.pause();
-          v.currentTime = 0;
-        });
+        video.pause();
+        video.currentTime = 0;
       }
     });
+  }, {
+    threshold: .1
   });
 
-  videos.forEach(video => {
-    observer.observe(video);
-  });
+  videos.forEach(video => observer.observe(video));
 }
 // content
 $(document).ready(function () {
@@ -54,7 +53,7 @@ $(document).ready(function () {
           $media.append($picture);
         }
       } else if (m.type === 'video') {
-        $media.append($('<video autoplay muted loop playsinline>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
+        $media.append($('<video>').attr({src: m.src, autoplay: true, muted: true, loop: true, playsinline: true, alt: project.client}));
       }
     });
     $slide.append($media);
@@ -194,37 +193,37 @@ $(function () {
     }
 
     // En desktop: primer clic centra, segundo clic cambia imagen
-    if (!$allSameSlides.first().data('centered')) {
-      // Primer clic: solo centrar
-      var containerScroll = $container.scrollTop();
-      var containerHeight = $container.height();
-      var closestSlide = null;
-      var minDistance = Infinity;
+    // if (!$allSameSlides.first().data('centered')) {
+    //   // Primer clic: solo centrar
+    //   var containerScroll = $container.scrollTop();
+    //   var containerHeight = $container.height();
+    //   var closestSlide = null;
+    //   var minDistance = Infinity;
 
-      $wrapper.find('.slide').each(function () {
-        var $slide = $(this);
-        if ($slide.data('index') === index) {
-          var slideTop = $slide.position().top + containerScroll;
-          var slideHeight = $slide.outerHeight(true);
-          var slideCenter = slideTop + slideHeight / 2;
-          var containerCenter = containerScroll + containerHeight / 2;
-          var distance = Math.abs(slideCenter - containerCenter);
+    //   $wrapper.find('.slide').each(function () {
+    //     var $slide = $(this);
+    //     if ($slide.data('index') === index) {
+    //       var slideTop = $slide.position().top + containerScroll;
+    //       var slideHeight = $slide.outerHeight(true);
+    //       var slideCenter = slideTop + slideHeight / 2;
+    //       var containerCenter = containerScroll + containerHeight / 2;
+    //       var distance = Math.abs(slideCenter - containerCenter);
 
-          if (distance < minDistance) {
-            minDistance = distance;
-            closestSlide = $slide;
-          }
-        }
-      });
+    //       if (distance < minDistance) {
+    //         minDistance = distance;
+    //         closestSlide = $slide;
+    //       }
+    //     }
+    //   });
 
-      if (closestSlide) {
-        var slideTop = closestSlide.position().top + containerScroll;
-        var slideHeight = closestSlide.outerHeight(true);
-        var scrollTo = slideTop + slideHeight / 2 - containerHeight / 2;
-        $container.animate({ scrollTop: scrollTo }, 500);
-      }
-      $allSameSlides.data('centered', true);
-    } else {
+    //   if (closestSlide) {
+    //     var slideTop = closestSlide.position().top + containerScroll;
+    //     var slideHeight = closestSlide.outerHeight(true);
+    //     var scrollTo = slideTop + slideHeight / 2 - containerHeight / 2;
+    //     $container.animate({ scrollTop: scrollTo }, 500);
+    //   }
+    //   $allSameSlides.data('centered', true);
+    // } else {
       // Segundo clic (y siguientes): cambiar imagen
       $allSameSlides.each(function () {
         const $media = $(this).find('picture, video');
@@ -234,7 +233,7 @@ $(function () {
         $media.hide().eq(nextIndex).show();
       });
       recalcHeights();
-    }
+    // }
 
     // Reinicia el flag de centrado en todas las otras slides
     $wrapper.find('.slide').each(function () {
