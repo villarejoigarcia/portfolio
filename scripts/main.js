@@ -398,6 +398,17 @@ function showActiveSlideIndex(activeIndex) {
   }
 }
 
+$(document).on('mouseenter', 'header', function () {
+  $(this).find('.multiple').addClass('hide-after');
+});
+
+$(document).on('mouseleave', 'header', function () {
+    setTimeout(() => { 
+      $(this).find('.multiple').removeClass('hide-after'); 
+    }, 666);
+    
+});
+
 function updateSlideIndexOnScroll() {
   if (isIndexAnimating || isDataHovering) return;
 
