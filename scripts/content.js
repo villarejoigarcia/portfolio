@@ -44,7 +44,11 @@ const content = {
         { type: "video", src: "images/carmenhouse_6.webm" },
         { type: "video", src: "images/carmenhouse_7.webm" },
         { type: "video", src: "images/carmenhouse_8.webm" },
-      ]
+      ],
+      link: {
+        url: "https://www.carmenhouse.com",
+        target: "_blank"
+      },
     },
     {
       year: "2025",
@@ -82,7 +86,6 @@ const content = {
         "Motion",
       ],
       media: [
-        // { type: "image", src: "images/villarejoigarcia_gigiros_1.webp", srcMobile: "images/villarejoigarcia_gigiros_1_1080.webp" },
         { type: "video", src: "images/villarejoigarcia_gigiros_1.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_2.mp4" },
         { type: "video", src: "images/villarejoigarcia_gigiros_3.mp4" },
@@ -105,6 +108,26 @@ const content = {
         { type: "image", src: "images/axvgarcia_gigiros_4.webp" },
         { type: "image", src: "images/axvgarcia_gigiros_5.webp" },
       ]
+    },
+    {
+      year: "2024",
+      client: "Entorns",
+      services: [
+        "Web",
+        "Code"
+      ],
+      media: [
+        { type: "image", src: "images/axvgarcia_entorns_5.webp", srcMobile: "images/axvgarcia_entorns_5_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_6.webp", srcMobile: "images/axvgarcia_entorns_6_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_7.webp", srcMobile: "images/axvgarcia_entorns_7_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_8.webp", srcMobile: "images/axvgarcia_entorns_8_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_9.webp", srcMobile: "images/axvgarcia_entorns_9_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_10.webp", srcMobile: "images/axvgarcia_entorns_10_1080.webp" }
+      ],
+      link: {
+        url: "https://www.entorns.io",
+        target: "_blank"
+      },
     },
     {
       year: "2024",
@@ -149,8 +172,6 @@ const content = {
       client: "Les Veus de la Vall",
       services: [
         "Identity",
-        "Web",
-        "Code"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp" },
@@ -172,7 +193,11 @@ const content = {
         { type: "image", src: "images/axvgarcia_sergirabasa_2.webp", srcMobile: "images/axvgarcia_sergirabasa_2_1080.webp" },
         { type: "image", src: "images/axvgarcia_sergirabasa_3.webp", srcMobile: "images/axvgarcia_sergirabasa_3_1080.webp" },
         { type: "image", src: "images/axvgarcia_sergirabasa_4.webp", srcMobile: "images/axvgarcia_sergirabasa_4_1080.webp" }
-      ]
+      ],
+      link: {
+        url: "https://www.sergirabasa.com",
+        target: "_blank"
+      },
     },
     {
       year: "2023",
@@ -195,7 +220,8 @@ const content = {
       services: [
         "Web",
         "Code",
-        "Identity"
+        "Identity",
+        "Offline"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_ianabecasis_1.webp", srcMobile: "images/axvgarcia_ianabecasis_1_1080.webp" },
@@ -229,7 +255,11 @@ const content = {
         { type: "image", src: "images/axvgarcia_elcortaldelgral_2.webp", srcMobile: "images/axvgarcia_elcortaldelgral_2_1080.webp" },
         { type: "image", src: "images/axvgarcia_elcortaldelgral_3.webp", srcMobile: "images/axvgarcia_elcortaldelgral_3_1080.webp" },
         { type: "image", src: "images/axvgarcia_elcortaldelgral_4.webp", srcMobile: "images/axvgarcia_elcortaldelgral_4_1080.webp" }
-      ]
+      ],
+      link: {
+        url: "https://www.campingcortaldelgral.cat",
+        target: "_blank"
+      },
     },
     {
       year: "2023",
@@ -255,20 +285,12 @@ const content = {
       client: "Entorns",
       services: [
         "Identity",
-        "Web",
-        "Code"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_entorns_1.webp", srcMobile: "images/axvgarcia_entorns_1_1080.webp" },
         { type: "image", src: "images/axvgarcia_entorns_2.gif", srcMobile: "images/axvgarcia_entorns_2_1080.gif" },
         { type: "image", src: "images/axvgarcia_entorns_3.webp", srcMobile: "images/axvgarcia_entorns_3_1080.webp" },
         { type: "image", src: "images/axvgarcia_entorns_4.webp", srcMobile: "images/axvgarcia_entorns_4_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_5.webp", srcMobile: "images/axvgarcia_entorns_5_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_6.webp", srcMobile: "images/axvgarcia_entorns_6_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_7.webp", srcMobile: "images/axvgarcia_entorns_7_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_8.webp", srcMobile: "images/axvgarcia_entorns_8_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_9.webp", srcMobile: "images/axvgarcia_entorns_9_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_10.webp", srcMobile: "images/axvgarcia_entorns_10_1080.webp" }
       ]
     },
     {

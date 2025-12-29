@@ -211,6 +211,10 @@ main {
 	margin-left: 19.5px;
 }
 
+.multiple>h1 {
+	display: flex;
+}
+
 .multiple>h1::after {
 	content: '…';
 }
@@ -222,6 +226,10 @@ main {
 .multiple .indent,
 .multiple .more * {
 	display: none;
+}
+
+.services a {
+	padding: 0;
 }
 
 /*carousel*/

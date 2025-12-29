@@ -94,24 +94,77 @@ $(document).ready(function () {
   $('#field-services').text(c.fields.services);
 
   // index
+  // const $slideIndex = $('#slide-index');
+  // $slideIndex.empty();
+  // c.projects.forEach(project => {
+  //   const $div = $('<div>');
+  //   $div.append($('<div>').append($('<h1>').text(project.year)));
+  //   $div.append($('<div>').append($('<h1>').html(`<em>${project.client}</em>`)));
+  //   if (project.services.length > 1) {
+  //     const $services = $('<div>').addClass('services multiple');
+  //     $services.append($('<h1>').text(project.services[0]));
+  //     const $more = $('<div>').addClass('more');
+  //     project.services.slice(1).forEach(s => {
+  //       $more.append($('<h1>').text(s));
+  //     });
+  //     $services.append($more);
+  //     $div.append($services);
+  //   } else {
+  //     $div.append($('<div>').addClass('services').append($('<h1>').text(project.services[0])));
+  //   }
+  //   $slideIndex.append($div);
+  // });
+
+  function renderService(service, project) {
+    if (
+      service === 'Web' &&
+      project.link &&
+      project.link.url
+    ) {
+      return $('<h1>').append(
+        $('<a>')
+          .attr({
+            href: project.link.url,
+            target: '_blank',
+            rel: 'noopener noreferrer'
+          })
+          .text(service)
+      );
+    }
+
+    return $('<h1>').text(service);
+  }
+
   const $slideIndex = $('#slide-index');
   $slideIndex.empty();
+
   c.projects.forEach(project => {
     const $div = $('<div>');
+
     $div.append($('<div>').append($('<h1>').text(project.year)));
     $div.append($('<div>').append($('<h1>').html(`<em>${project.client}</em>`)));
+
     if (project.services.length > 1) {
       const $services = $('<div>').addClass('services multiple');
-      $services.append($('<h1>').text(project.services[0]));
+
+      $services.append(renderService(project.services[0], project));
+
       const $more = $('<div>').addClass('more');
-      project.services.slice(1).forEach(s => {
-        $more.append($('<h1>').text(s));
+      project.services.slice(1).forEach(service => {
+        $more.append(renderService(service, project));
       });
+
       $services.append($more);
       $div.append($services);
+
     } else {
-      $div.append($('<div>').addClass('services').append($('<h1>').text(project.services[0])));
+      $div.append(
+        $('<div>')
+          .addClass('services')
+          .append(renderService(project.services[0], project))
+      );
     }
+
     $slideIndex.append($div);
   });
 });
