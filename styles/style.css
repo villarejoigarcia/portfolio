@@ -16,7 +16,7 @@ img,
 video {
 	display: block;
 	width: auto;
-	max-height: calc(75vh - 3px*2);
+	max-height: calc(66.666vh - 3px*2);
 	max-width: 100%;
 }
 
