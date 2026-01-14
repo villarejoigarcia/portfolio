@@ -219,6 +219,18 @@ main {
 	content: '…';
 }
 
+header .multiple>h1 {
+	position: relative;
+}
+
+header .multiple>h1::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: var(--light-grey);
+	padding: 0 3px;
+}
+
 .multiple.hide-after>h1::after {
 	content: '';
 }
