@@ -6,14 +6,22 @@ function observeCarouselVideos() {
     entries.forEach(entry => {
       const video = entry.target;
 
+      // if (entry.isIntersecting) {
+ 
+      //   video.muted = true;
+      //   video.play().catch(() => {});
+      // }
+
       if (entry.isIntersecting) {
         // Pausar TODOS los demás
-        videos.forEach(v => {
-          if (v !== video) {
-            v.pause();
-            v.currentTime = 0;
-          }
-        });
+        // videos.forEach(v => {
+        //   if (v !== video) {
+        //     v.pause();
+        //     v.currentTime = 0;
+        //   } else {
+            
+        //   }
+        // });
 
         video.muted = true;
         video.play().catch(() => {});
@@ -23,7 +31,7 @@ function observeCarouselVideos() {
       }
     });
   }, {
-    threshold: .05
+    threshold: 0
   });
 
   videos.forEach(video => observer.observe(video));

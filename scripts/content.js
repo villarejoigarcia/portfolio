@@ -1,6 +1,6 @@
 const content = {
   header: {
-    lastUpdate: "Last update: Dec. 16, 2025",
+    lastUpdate: "Last update: Jan. 14, 2026",
     information: "information",
     name: "Alex Villarejo i Garcia",
     description: "Creative and artistic interpretations",
@@ -30,23 +30,17 @@ const content = {
   projects: [
     {
       year: "2025",
-      client: "Carmen House",
+      client: "Ester G. Mera",
       services: [
         "Web",
         "Code",
+        "@polsolabg",
       ],
       media: [
-        { type: "video", src: "images/carmenhouse_1.webm" },
-        { type: "video", src: "images/carmenhouse_2.webm" },
-        { type: "video", src: "images/carmenhouse_3.webm" },
-        { type: "video", src: "images/carmenhouse_4.webm" },
-        { type: "video", src: "images/carmenhouse_5.webm" },
-        { type: "video", src: "images/carmenhouse_6.webm" },
-        { type: "video", src: "images/carmenhouse_7.webm" },
-        { type: "video", src: "images/carmenhouse_8.webm" },
+        { type: "video", src: "images/estergmera_1.webm" },
       ],
       link: {
-        url: "https://www.carmenhouse.com",
+        url: "https://www.estergmera.com",
         target: "_blank"
       },
     },
@@ -76,6 +70,29 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_antex_15.webp" },
         { type: "image", src: "images/villarejoigarcia_antex_16.webp" }
       ]
+    },
+    {
+      year: "2025",
+      client: "Carmen House",
+      services: [
+        "Web",
+        "Code",
+        "@alfredllorca_",
+      ],
+      media: [
+        { type: "video", src: "images/carmenhouse_2.webm" },
+        { type: "video", src: "images/carmenhouse_1.webm" },
+        { type: "video", src: "images/carmenhouse_3.webm" },
+        { type: "video", src: "images/carmenhouse_4.webm" },
+        { type: "video", src: "images/carmenhouse_5.webm" },
+        { type: "video", src: "images/carmenhouse_6.webm" },
+        { type: "video", src: "images/carmenhouse_7.webm" },
+        { type: "video", src: "images/carmenhouse_8.webm" },
+      ],
+      link: {
+        url: "https://www.carmenhouse.com",
+        target: "_blank"
+      },
     },
     {
       year: "2025",
