@@ -33,8 +33,8 @@ const content = {
       client: "Ester G. Mera",
       services: [
         "Web",
-        "Code",
         "@polsolabg",
+        "Code",
       ],
       media: [
         { type: "video", src: "images/estergmera_1.webm" },
@@ -76,12 +76,12 @@ const content = {
       client: "Carmen House",
       services: [
         "Web",
-        "Code",
         "@alfredllorca_",
+        "Code",
       ],
       media: [
-        { type: "video", src: "images/carmenhouse_2.webm" },
         { type: "video", src: "images/carmenhouse_1.webm" },
+        { type: "video", src: "images/carmenhouse_2.webm" },
         { type: "video", src: "images/carmenhouse_3.webm" },
         { type: "video", src: "images/carmenhouse_4.webm" },
         { type: "video", src: "images/carmenhouse_5.webm" },
