@@ -61,7 +61,32 @@ $(document).ready(function () {
           $media.append($picture);
         }
       } else if (m.type === 'video') {
-        $media.append($('<video>').attr({src: m.src, preload: 'auto', muted: true, loop: true, playsinline: true, alt: project.client}));
+        const $video = $('<video>').attr({
+          src: m.src,
+          preload: 'auto',
+          muted: true,
+          loop: true,
+          playsinline: true,
+          alt: project.client
+        });
+
+        $media.append($video);
+
+        if (project.hideImage) {
+          $video.on('playing', function () {
+            // hide first image
+            $media.find('img').first().addClass('is-hidden');
+            // ensure this video is visible (CSS hides non-first media by default)
+            $(this).show();
+          });
+
+          $video.on('pause ended', function () {
+            // show image again
+            $media.find('img').first().removeClass('is-hidden');
+            // hide video again so layout returns to initial state
+            $(this).hide();
+          });
+        }
       }
     });
     $slide.append($media);
