@@ -38,6 +38,27 @@ function observeCarouselVideos() {
 
   videos.forEach(video => observer.observe(video));
 }
+// scroll to play
+function onFirstUserScroll(callback) {
+  const $container = $('#carousel-container');
+  
+  const handleScroll = function () {
+    callback();
+
+    $container.off('scroll', handleScroll);
+  };
+
+  $container.on('scroll', handleScroll);
+}
+
+onFirstUserScroll(() => {
+  $('#carousel .slide').each(function () {
+    const $video = $(this).find('video');
+    if ($video.length) {
+      $video.get(0).play().catch(() => {});
+    }
+  });
+});
 // content
 $(document).ready(function () {
   if (!window.content) return;
