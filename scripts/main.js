@@ -24,6 +24,8 @@ function observeCarouselVideos() {
         // });
 
         video.muted = true;
+        video.autoplay = true;
+        video.playsinline = true;
         video.play().catch(() => {});
       } else {
         video.pause();
