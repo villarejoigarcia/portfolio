@@ -38,8 +38,7 @@ const content = {
       ],
       hideImage: true,
       media: [
-        { type: "image", src: "images/estergmera_1.webp" },
-        { type: "video", src: "images/estergmera_1.webm" },
+        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
       ],
       link: {
         url: "https://www.estergmera.com",
