@@ -295,10 +295,6 @@ body::-webkit-scrollbar {
 	display: none;
 }
 
-.is-hidden {
-	display: none;
-}
-
 /*responsive*/
 
 @media (max-width: 1024px) {

@@ -1,4 +1,4 @@
-// --- Autoplay videos ---
+// autoplay
 function observeCarouselVideos() {
   const videos = document.querySelectorAll('#carousel .slide video');
 
@@ -6,30 +6,16 @@ function observeCarouselVideos() {
     entries.forEach(entry => {
       const video = entry.target;
 
-      // if (entry.isIntersecting) {
- 
-      //   video.muted = true;
-      //   video.play().catch(() => {});
-      // }
-
       if (entry.isIntersecting) {
-        // Pausar TODOS los demás
-        // videos.forEach(v => {
-        //   if (v !== video) {
-        //     v.pause();
-        //     v.currentTime = 0;
-        //   } else {
-            
-        //   }
-        // });
 
         video.muted = true;
-        video.autoplay = true;
-        video.playsinline = true;
         video.play().catch(() => {});
+
       } else {
-        video.pause();
-        video.currentTime = 0;
+        if (!video.paused) {
+          video.pause();
+          video.currentTime = 0;
+        }
       }
     });
   }, {
@@ -37,28 +23,9 @@ function observeCarouselVideos() {
   });
 
   videos.forEach(video => observer.observe(video));
-}
-// scroll to play
-function onFirstUserScroll(callback) {
-  const $container = $('#carousel-container');
-  
-  const handleScroll = function () {
-    callback();
 
-    $container.off('scroll', handleScroll);
-  };
-
-  $container.on('scroll', handleScroll);
 }
 
-onFirstUserScroll(() => {
-  $('#carousel .slide').each(function () {
-    const $video = $(this).find('video');
-    if ($video.length) {
-      $video.get(0).play().catch(() => {});
-    }
-  });
-});
 // content
 $(document).ready(function () {
   if (!window.content) return;
@@ -78,7 +45,6 @@ $(document).ready(function () {
           $picture.append($('<img>').attr('src', m.src).attr('alt', project.client));
           $media.append($picture);
         } else {
-          // $media.append($('<img>').attr('src', m.src).attr('alt', project.client));
           const $picture = $('<picture>');
           $picture.append($('<img>').attr('src', m.src).attr('alt', project.client));
           $media.append($picture);
@@ -98,7 +64,7 @@ $(document).ready(function () {
     $slide.append($media);
     $carousel.append($slide);
   });
-  // Asegurar que los videos recién insertados sean observados
+
   observeCarouselVideos();
 
   setTimeout(() => {
@@ -276,6 +242,14 @@ $(function () {
     }
   });
 
+  $('.slide').click(function () {
+    const video = $(this).find('video').first().get(0);
+    video.muted = true;
+    video.playsInline = true;
+    video.play().catch(() => { });
+    video.currentTime = 0;
+  });
+
   // --- Slide click: cambia imagen/video y centra slide ---
   $wrapper.on('click', '.slide', function () {
     const index = $(this).data('index');
@@ -294,39 +268,6 @@ $(function () {
       return;
     }
 
-    // En desktop: primer clic centra, segundo clic cambia imagen
-    // if (!$allSameSlides.first().data('centered')) {
-    //   // Primer clic: solo centrar
-    //   var containerScroll = $container.scrollTop();
-    //   var containerHeight = $container.height();
-    //   var closestSlide = null;
-    //   var minDistance = Infinity;
-
-    //   $wrapper.find('.slide').each(function () {
-    //     var $slide = $(this);
-    //     if ($slide.data('index') === index) {
-    //       var slideTop = $slide.position().top + containerScroll;
-    //       var slideHeight = $slide.outerHeight(true);
-    //       var slideCenter = slideTop + slideHeight / 2;
-    //       var containerCenter = containerScroll + containerHeight / 2;
-    //       var distance = Math.abs(slideCenter - containerCenter);
-
-    //       if (distance < minDistance) {
-    //         minDistance = distance;
-    //         closestSlide = $slide;
-    //       }
-    //     }
-    //   });
-
-    //   if (closestSlide) {
-    //     var slideTop = closestSlide.position().top + containerScroll;
-    //     var slideHeight = closestSlide.outerHeight(true);
-    //     var scrollTo = slideTop + slideHeight / 2 - containerHeight / 2;
-    //     $container.animate({ scrollTop: scrollTo }, 500);
-    //   }
-    //   $allSameSlides.data('centered', true);
-    // } else {
-      // Segundo clic (y siguientes): cambiar imagen
       $allSameSlides.each(function () {
         const $media = $(this).find('picture, video');
         const $visible = $media.filter(':visible');
@@ -335,9 +276,7 @@ $(function () {
         $media.hide().eq(nextIndex).show();
       });
       recalcHeights();
-    // }
 
-    // Reinicia el flag de centrado en todas las otras slides
     $wrapper.find('.slide').each(function () {
       if ($(this).data('index') !== index) {
         $(this).removeData('centered');
@@ -345,13 +284,12 @@ $(function () {
     });
   });
 
-  // --- Shuffle ---
+  //shuffle
   $('#view-shuffle').click(function () {
     isShuffling = true;
     const $slides = $wrapper.find('.slide').not('.clone');
     const numSlides = $slides.length;
 
-    // Cambia directamente a una imagen aleatoria en cada slide
     $slides.each(function () {
       const index = $(this).data('index');
       const $allSameSlides = $wrapper.find(`.slide[data-index="${index}"]`);
@@ -361,7 +299,6 @@ $(function () {
       if (mediaLen > 0) {
         const randomIndex = Math.floor(Math.random() * mediaLen);
         
-        // Oculta todas las imágenes/videos y muestra solo la aleatoria
         $allSameSlides.each(function () {
           $(this).find('picture, video').hide();
           $(this).find('picture, video').eq(randomIndex).show();
@@ -369,7 +306,6 @@ $(function () {
       }
     });
 
-    // Cambia la posición del scroll aleatoriamente (sin animación)
     const randomScrollIndex = Math.floor(Math.random() * numSlides);
     let scrollTo = 0;
     for (let i = 0; i < randomScrollIndex; i++) {
@@ -381,11 +317,11 @@ $(function () {
     setTimeout(function () {
       isShuffling = false;
       updateSlideIndexOnScroll();
-    }, 100); // Tiempo mínimo ya que no hay animación escalonada
+    }, 100);
   });
 });
 
-// --- Slide index: animación y control ---
+// index
 function showActiveSlideIndex(activeIndex) {
   let items = $('#slide-index > div');
   let len = items.length;
@@ -393,27 +329,24 @@ function showActiveSlideIndex(activeIndex) {
 
   const indexChanged = lastActiveIndex !== activeIndex;
   
-  // Si cambió el índice, ocultar elementos .more del anterior progresivamente
   if (indexChanged && lastActiveIndex !== -1) {
     const $previousMoreChildren = items.eq(lastActiveIndex).find('.more').children();
     const moreLen = $previousMoreChildren.length;
     if (moreLen > 0) {
-      // Mostrar ::after cuando se ocultan los elementos .more
+
       items.eq(lastActiveIndex).find('.multiple').removeClass('hide-after');
       
       $previousMoreChildren.each(function (i, el) {
-        const idx = moreLen - 1 - i; // Orden inverso
+        const idx = moreLen - 1 - i;
         setTimeout(function () {
           $($previousMoreChildren[idx]).hide();
         }, i * animationDelay);
       });
     }
     
-    // Ocultar elementos .more de TODOS los otros slides (excepto el activo)
     items.each(function(i) {
       if (i !== activeIndex && i !== lastActiveIndex) {
         $(this).find('.more').children().hide();
-        // Mostrar ::after para slides que no son el activo
         $(this).find('.multiple').removeClass('hide-after');
       }
     });
@@ -442,11 +375,9 @@ function showActiveSlideIndex(activeIndex) {
           shuffleLetters();
         }
         
-        // Mostrar hijos de .more del elemento activo progresivamente
         setTimeout(function() {
           const $activeMoreChildren = items.eq(activeIndex).find('.more').children();
           if ($activeMoreChildren.length > 0) {
-            // Ocultar ::after cuando empiezan a aparecer los elementos .more
             items.eq(activeIndex).find('.multiple').addClass('hide-after');
           }
           $activeMoreChildren.each(function (i, el) {
@@ -458,11 +389,9 @@ function showActiveSlideIndex(activeIndex) {
         
       }, len * animationDelay);
     } else {
-      // Ocultar elementos .more de todos los slides excepto el activo
       items.each(function(i) {
         if (i !== activeIndex) {
           $(this).find('.more').children().hide();
-          // Mostrar ::after para slides que no son el activo
           $(this).find('.multiple').removeClass('hide-after');
         }
       });
@@ -473,11 +402,9 @@ function showActiveSlideIndex(activeIndex) {
         shuffleLetters();
       }
       
-      // Mostrar hijos de .more del elemento activo progresivamente
       setTimeout(function() {
         const $activeMoreChildren = items.eq(activeIndex).find('.more').children();
         if ($activeMoreChildren.length > 0) {
-          // Ocultar ::after cuando empiezan a aparecer los elementos .more
           items.eq(activeIndex).find('.multiple').addClass('hide-after');
         }
         $activeMoreChildren.each(function (i, el) {
@@ -559,12 +486,10 @@ $('.data').hover(
     var activeIndex = items.index(activeItem);
     var len = items.length;
 
-    // Primero mostrar todos los slide index (excepto el activo)
     items.each(function (i, el) {
       if (i !== activeIndex) {
         let t = setTimeout(function () {
           $(el).stop(true, true).show();
-          // Asegurar que los elementos .more de este slide se mantengan ocultos
           $(el).find('.more').children().hide();
         }, i * animationDelay);
         hoverTimeouts.push(t);
@@ -572,9 +497,7 @@ $('.data').hover(
     });
     activeItem.show();
 
-    // Luego de mostrar todos, ocultar hijos de .more progresivamente
     setTimeout(function () {
-      // Solo ocultar progresivamente los hijos de .more del slide activo
       const $activeMoreChildren = activeItem.find('.more').children();
       const moreLen = $activeMoreChildren.length;
       if (moreLen > 0) {
@@ -582,17 +505,15 @@ $('.data').hover(
           const idx = moreLen - 1 - i; // Orden inverso
           setTimeout(function () {
             $($activeMoreChildren[idx]).hide();
-            // Mostrar ::after cuando se oculta el último elemento .more
             if (idx === 0) {
               activeItem.find('.multiple').removeClass('hide-after');
             }
           }, i * animationDelay);
         });
       } else {
-        // Si no hay elementos .more, mostrar ::after inmediatamente
         activeItem.find('.multiple').removeClass('hide-after');
       }
-    }, len * animationDelay + 66); // Espera a que todos los slide index estén visibles
+    }, len * animationDelay + 66);
   },
   function () {
     isDataHovering = false;
@@ -614,12 +535,10 @@ $('.data').hover(
     });
     activeItem.show();
     
-    // Mostrar hijos de .more del slide activo DESPUÉS de que se oculten los otros slide indexes
     setTimeout(function() {
       if (!isDataHovering) {
         const $activeMoreChildren = activeItem.find('.more').children();
         if ($activeMoreChildren.length > 0) {
-          // Ocultar ::after cuando empiezan a aparecer los elementos .more
           activeItem.find('.multiple').addClass('hide-after');
         }
         $activeMoreChildren.each(function (i, el) {
@@ -628,7 +547,7 @@ $('.data').hover(
           }, i * animationDelay);
         });
       }
-    }, len * animationDelay + 666); // Esperar a que terminen de ocultarse los otros
+    }, len * animationDelay + 666); 
   }
 );
 
@@ -642,12 +561,11 @@ $('#slide-index').on('mouseleave', '> div', function () {
 $('#slide-index').on('click', '> div', function () {
   var index = $(this).index();
 
-  // Cambia el activo visualmente
   var items = $('#slide-index > div');
   items.removeClass('active');
   items.eq(index).addClass('active');
 
-  // Centrar el slide correspondiente
+  // Centrar  slide correspondiente
   var $container = $('#carousel-container');
   var $slides = $('#carousel .slide');
   var containerScroll = $container.scrollTop();
@@ -685,7 +603,7 @@ $('#slide-index').on('click', '> div', function () {
     }
 });
 
-// --- Información animada protegida ---
+// hide fields
 function hideInformationAnimated() {
   if (isInformationAnimating) {
     pendingInformationUpdate = 'hide';
@@ -708,7 +626,6 @@ function hideInformationAnimated() {
   setTimeout(function () {
     $('#information').hide();
     isInformationAnimating = false;
-    // Ejecuta petición pendiente si existe
     if (pendingInformationUpdate === 'show') {
       pendingInformationUpdate = null;
       showInformationAnimated();
@@ -737,7 +654,6 @@ function showInformationAnimated() {
 
   setTimeout(function () {
     isInformationAnimating = false;
-    // Ejecuta petición pendiente si existe
     if (pendingInformationUpdate === 'hide') {
       pendingInformationUpdate = null;
       hideInformationAnimated();
@@ -745,36 +661,33 @@ function showInformationAnimated() {
   }, $children.length * animationDelay);
 }
 
-// --- Hover en header protegido ---
+// show fields
 $('header').hover(
   function () {
     showInformationAnimated();
   },
   function () {
-    // Detener aparición y lanzar animación de ocultar escalonada
     infoTimeouts.forEach(clearTimeout);
     infoTimeouts = [];
     hideInformationAnimated();
   }
 );
 
-// --- Shuffle de letras ---
+// shuffle
 $(document).ready(function () {
   const $h1 = $('#view-shuffle');
   const text = $h1.text();
 
-  // Convertir cada letra en un span individual
   $h1.html(text.split('').map(char =>
     char === ' ' ? ' ' : `<span style="display: inline-block;">${char}</span>`
   ).join(''));
 
-  // Click handler para shuffle de margin-bottom
   $h1.on('click', function () {
     shuffleLetters();
   });
 });
 
-// --- Inicialización visual ---
+// start
 $(document).ready(function () {
   $('#slide-index > div').first().addClass('active');
   setTimeout(function () {
@@ -783,7 +696,7 @@ $(document).ready(function () {
   }, 666);
 });
 
-// --- multiple categories con animación escalonada ---
+// multiple
 $('.multiple').hover(
   function () {
     const $indents = $(this).find('.indent');
