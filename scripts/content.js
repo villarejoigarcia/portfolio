@@ -81,7 +81,7 @@ const content = {
         "Code",
       ],
       media: [
-        { type: "video", src: "images/carmenhouse_full.webm" },
+        { type: "video", src: "images/carmenhouse_full.webm", poster: "images/carmenhouse_1.webp"},
       ],
       link: {
         url: "https://www.carmenhouse.com",
