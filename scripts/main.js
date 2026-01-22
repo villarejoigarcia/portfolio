@@ -244,10 +244,14 @@ $(function () {
 
   $('.slide').click(function () {
     const video = $(this).find('video').first().get(0);
+    const mediaItems = $slide.find('.media').children();
     video.muted = true;
     video.playsInline = true;
     video.play().catch(() => { });
+    if ($mediaItems.length > 1) {
     video.currentTime = 0;
+    video.pause();
+    }
   });
 
   // --- Slide click: cambia imagen/video y centra slide ---
@@ -700,7 +704,7 @@ $(document).ready(function () {
 $('.multiple').hover(
   function () {
     const $indents = $(this).find('.indent');
-    $indents.hide(); // Ocultar todos primero
+    $indents.hide();
     
     $indents.each(function (i, el) {
       setTimeout(function () {
@@ -713,7 +717,7 @@ $('.multiple').hover(
     const len = $indents.length;
     
     $indents.each(function (i, el) {
-      const idx = len - 1 - i; // Orden inverso para ocultar
+      const idx = len - 1 - i;
       setTimeout(function () {
         $($indents[idx]).hide();
       }, i * 100);

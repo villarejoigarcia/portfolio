@@ -109,7 +109,6 @@ const content = {
       client: "Gigi Ros",
       services: [
         "Vinyl",
-        "Cover artwork",
         "Graphic design"
       ],
       media: [
@@ -213,7 +212,6 @@ const content = {
       services: [
         "Cover artwork",
         "Graphic design",
-        "Credits"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_marianatambe_1.webp", srcMobile: "images/axvgarcia_marianatambe_1_1080.webp" },
@@ -274,9 +272,7 @@ const content = {
       client: "Le Nais",
       services: [
         "Vinyl",
-        "Cover artwork",
         "Graphic design",
-        "Credits"
       ],
       media: [
         { type: "image", src: "images/axvgarcia_lenais_1.webp", srcMobile: "images/axvgarcia_lenais_1_1080.webp" },
