@@ -1,6 +1,6 @@
 const content = {
   header: {
-    lastUpdate: "Last update: Jan. 14, 2026",
+    lastUpdate: "Last update: Mar. 25, 2026",
     information: "information",
     name: "Alex Villarejo i Garcia",
     description: "Creative and artistic interpretations",
