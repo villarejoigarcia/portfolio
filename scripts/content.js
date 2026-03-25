@@ -61,6 +61,39 @@ const content = {
       ],
     },
     {
+      year: "2026",
+      client: "La Manso",
+      services: [
+        "Graphic design",
+      ],
+      media: [
+        { type: "image", src: "images/lamanso_6.webp" },
+        { type: "image", src: "images/lamanso_1.webp" },
+        { type: "image", src: "images/lamanso_2.webp" },
+        { type: "image", src: "images/lamanso_4.webp" },
+        { type: "image", src: "images/lamanso_3.webp" },
+        { type: "image", src: "images/lamanso_5.webp" },
+        // { type: "image", src: "images/lamanso_7.webp" },
+      ],
+    },
+    {
+      year: "2025",
+      client: "Ester G. Mera",
+      services: [
+        "Web",
+        "Code",
+        "@polsolabg",
+      ],
+      hideImage: true,
+      media: [
+        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
+      ],
+      link: {
+        url: "https://www.estergmera.com",
+        target: "_blank"
+      },
+    },
+    {
       year: "2025",
       client: "Antex",
       services: [
@@ -86,23 +119,6 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_antex_15.webp" },
         { type: "image", src: "images/villarejoigarcia_antex_16.webp" }
       ]
-    },
-    {
-      year: "2025",
-      client: "Ester G. Mera",
-      services: [
-        "Web",
-        "Code",
-        "@polsolabg",
-      ],
-      hideImage: true,
-      media: [
-        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
-      ],
-      link: {
-        url: "https://www.estergmera.com",
-        target: "_blank"
-      },
     },
     {
       year: "2025",
