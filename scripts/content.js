@@ -29,21 +29,36 @@ const content = {
   },
   projects: [
     {
-      year: "2025",
-      client: "Ester G. Mera",
+      year: "Soon",
+      client: "Ian Abecasis",
       services: [
         "Web",
-        "@polsolabg",
         "Code",
+        "@verosantana__",
       ],
       hideImage: true,
       media: [
-        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
+        { type: "video", src: "images/ianabecasis_1.webm", poster: "images/ianabecasis_1.webp" },
       ],
       link: {
-        url: "https://www.estergmera.com",
+        url: "https://www.ianabecasis.com",
         target: "_blank"
       },
+    },
+    {
+      year: "Soon",
+      client: "Bofirax",
+      services: [
+        "Creative direction",
+        "Art direction",
+        "Graphic design",
+        "Vinyl",
+      ],
+      media: [
+        { type: "image", src: "images/bofirax_2.webp" },
+        { type: "image", src: "images/bofirax_1.webp" },
+        { type: "image", src: "images/bofirax_3.webp" },
+      ],
     },
     {
       year: "2025",
@@ -74,11 +89,28 @@ const content = {
     },
     {
       year: "2025",
+      client: "Ester G. Mera",
+      services: [
+        "Web",
+        "Code",
+        "@polsolabg",
+      ],
+      hideImage: true,
+      media: [
+        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
+      ],
+      link: {
+        url: "https://www.estergmera.com",
+        target: "_blank"
+      },
+    },
+    {
+      year: "2025",
       client: "Carmen House",
       services: [
         "Web",
-        "@alfredllorca_",
         "Code",
+        "@alfredllorca_",
       ],
       media: [
         { type: "video", src: "images/carmenhouse_full.webm", poster: "images/carmenhouse_1.webp"},
@@ -174,20 +206,20 @@ const content = {
         { type: "video", src: "images/axvgarcia_polbordas_10.mp4" }
       ]
     },
-    {
-      year: "2024",
-      client: "Les Veus de la Vall",
-      services: [
-        "Identity",
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp" },
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_2.webp", srcMobile: "images/axvgarcia_lesveusdelavall_2_1080.webp" },
-        { type: "video", src: "images/axvgarcia_lesveusdelavall_3.mp4" },
-        { type: "video", src: "images/axvgarcia_lesveusdelavall_4.mp4" },
-        { type: "image", src: "images/axvgarcia_lesveusdelavall_5.gif", srcMobile: "images/axvgarcia_lesveusdelavall_5_1080.gif" }
-      ]
-    },
+    // {
+    //   year: "2024",
+    //   client: "Les Veus de la Vall",
+    //   services: [
+    //     "Identity",
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_lesveusdelavall_1.webp" },
+    //     { type: "image", src: "images/axvgarcia_lesveusdelavall_2.webp", srcMobile: "images/axvgarcia_lesveusdelavall_2_1080.webp" },
+    //     { type: "video", src: "images/axvgarcia_lesveusdelavall_3.mp4" },
+    //     { type: "video", src: "images/axvgarcia_lesveusdelavall_4.mp4" },
+    //     { type: "image", src: "images/axvgarcia_lesveusdelavall_5.gif", srcMobile: "images/axvgarcia_lesveusdelavall_5_1080.gif" }
+    //   ]
+    // },
     {
       year: "2024",
       client: "Sergi Rabasa",
@@ -220,22 +252,22 @@ const content = {
         { type: "image", src: "images/axvgarcia_marianatambe_4.webp", srcMobile: "images/axvgarcia_marianatambe_4_1080.webp" }
       ]
     },
-    {
-      year: "2023",
-      client: "Ian Abecasis",
-      services: [
-        "Web",
-        "Code",
-        "Identity",
-        "Offline"
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_ianabecasis_1.webp", srcMobile: "images/axvgarcia_ianabecasis_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_2.webp", srcMobile: "images/axvgarcia_ianabecasis_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_3.webp", srcMobile: "images/axvgarcia_ianabecasis_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_ianabecasis_4.webp", srcMobile: "images/axvgarcia_ianabecasis_4_1080.webp" }
-      ]
-    },
+    // {
+    //   year: "2023",
+    //   client: "Ian Abecasis",
+    //   services: [
+    //     "Web",
+    //     "Code",
+    //     "Identity",
+    //     "Offline"
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_ianabecasis_1.webp", srcMobile: "images/axvgarcia_ianabecasis_1_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_ianabecasis_2.webp", srcMobile: "images/axvgarcia_ianabecasis_2_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_ianabecasis_3.webp", srcMobile: "images/axvgarcia_ianabecasis_3_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_ianabecasis_4.webp", srcMobile: "images/axvgarcia_ianabecasis_4_1080.webp" }
+    //   ]
+    // },
     {
       year: "2023",
       client: "Festa Major de Mussa",
@@ -248,25 +280,25 @@ const content = {
         { type: "image", src: "images/axvgarcia_festamajordemussa_3.webp", srcMobile: "images/axvgarcia_festamajordemussa_3_1080.webp" }
       ]
     },
-    {
-      year: "2023",
-      client: "El Cortal del Gral",
-      services: [
-        "Web",
-        "Code",
-        "Identity"
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_1.webp", srcMobile: "images/axvgarcia_elcortaldelgral_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_2.webp", srcMobile: "images/axvgarcia_elcortaldelgral_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_3.webp", srcMobile: "images/axvgarcia_elcortaldelgral_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_elcortaldelgral_4.webp", srcMobile: "images/axvgarcia_elcortaldelgral_4_1080.webp" }
-      ],
-      link: {
-        url: "https://www.campingcortaldelgral.cat",
-        target: "_blank"
-      },
-    },
+    // {
+    //   year: "2023",
+    //   client: "El Cortal del Gral",
+    //   services: [
+    //     "Web",
+    //     "Code",
+    //     "Identity"
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_elcortaldelgral_1.webp", srcMobile: "images/axvgarcia_elcortaldelgral_1_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_elcortaldelgral_2.webp", srcMobile: "images/axvgarcia_elcortaldelgral_2_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_elcortaldelgral_3.webp", srcMobile: "images/axvgarcia_elcortaldelgral_3_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_elcortaldelgral_4.webp", srcMobile: "images/axvgarcia_elcortaldelgral_4_1080.webp" }
+    //   ],
+    //   link: {
+    //     url: "https://www.campingcortaldelgral.cat",
+    //     target: "_blank"
+    //   },
+    // },
     {
       year: "2023",
       client: "Le Nais",
