@@ -67,8 +67,8 @@ const content = {
         "Graphic design",
       ],
       media: [
-        { type: "image", src: "images/lamanso_6.webp" },
         { type: "image", src: "images/lamanso_1.webp" },
+        { type: "image", src: "images/lamanso_6.webp" },
         { type: "image", src: "images/lamanso_2.webp" },
         { type: "image", src: "images/lamanso_4.webp" },
         { type: "image", src: "images/lamanso_3.webp" },
