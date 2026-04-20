@@ -102,6 +102,10 @@ a {
 	background-color: transparent;
 }
 
+h1 a {
+	padding: 0;
+}
+
 #view {
 	position: fixed;
 	bottom: 0;

@@ -56,7 +56,7 @@ const content = {
         { type: "video", src: "images/leonromero.webm", poster: "images/leonromero.webp" },
       ],
       link: {
-        url: "https://www.ianabecasis.com",
+        url: "https://www.leonromero.work",
         target: "_blank"
       },
     },

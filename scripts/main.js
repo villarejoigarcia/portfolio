@@ -120,23 +120,37 @@ $(document).ready(function () {
   //   $slideIndex.append($div);
   // });
 
-  function renderService(service, project) {
-    if (
-      service === 'Web' &&
-      project.link &&
-      project.link.url
-    ) {
-      return $('<h1>').append(
+  function hasWebOrCodeService(project) {
+    if (!Array.isArray(project.services)) return false;
+
+    return project.services.some(service => {
+      const normalized = String(service).trim().toLowerCase();
+      return normalized === 'web' || normalized === 'code';
+    });
+  }
+
+  function renderProjectClient(project) {
+    const $title = $('<h1>');
+    const $name = $('<em>').text(project.client);
+
+    if (hasWebOrCodeService(project) && project.link && project.link.url) {
+      const target = project.link.target || '_blank';
+
+      return $title.append(
         $('<a>')
           .attr({
             href: project.link.url,
-            target: '_blank',
+            target,
             rel: 'noopener noreferrer'
           })
-          .text(service)
+          .append($name)
       );
     }
 
+    return $title.append($name);
+  }
+
+  function renderService(service) {
     return $('<h1>').text(service);
   }
 
@@ -147,16 +161,16 @@ $(document).ready(function () {
     const $div = $('<div>');
 
     $div.append($('<div>').append($('<h1>').text(project.year)));
-    $div.append($('<div>').append($('<h1>').html(`<em>${project.client}</em>`)));
+    $div.append($('<div>').append(renderProjectClient(project)));
 
     if (project.services.length > 1) {
       const $services = $('<div>').addClass('services multiple');
 
-      $services.append(renderService(project.services[0], project));
+      $services.append(renderService(project.services[0]));
 
       const $more = $('<div>').addClass('more');
       project.services.slice(1).forEach(service => {
-        $more.append(renderService(service, project));
+        $more.append(renderService(service));
       });
 
       $services.append($more);
@@ -166,7 +180,7 @@ $(document).ready(function () {
       $div.append(
         $('<div>')
           .addClass('services')
-          .append(renderService(project.services[0], project))
+          .append(renderService(project.services[0]))
       );
     }
 
@@ -560,6 +574,19 @@ $('#slide-index').on('mouseenter', '> div', function () {
 });
 $('#slide-index').on('mouseleave', '> div', function () {
   $(this).removeClass('hover');
+});
+
+$('#slide-index').on('click', '> div a', function (e) {
+  const $item = $(this).closest('#slide-index > div');
+
+  if ($item.hasClass('active')) {
+    e.stopPropagation();
+    return;
+  }
+
+  e.preventDefault();
+  e.stopPropagation();
+  $item.trigger('click');
 });
 
 $('#slide-index').on('click', '> div', function () {
