@@ -1,6 +1,6 @@
 const content = {
   header: {
-    lastUpdate: "Last update: Mar. 25, 2026",
+    lastUpdate: "Last update: Apr. 20, 2026",
     information: "information",
     name: "Alex Villarejo i Garcia",
     description: "Creative and artistic interpretations",
@@ -28,37 +28,37 @@ const content = {
     services: "services"
   },
   projects: [
+    // {
+    //   year: "Soon",
+    //   client: "Ian Abecasis",
+    //   services: [
+    //     "Web",
+    //     "Code",
+    //     "@verosantana__",
+    //   ],
+    //   hideImage: true,
+    //   media: [
+    //     { type: "video", src: "images/ianabecasis_1.webm", poster: "images/ianabecasis_1.webp" },
+    //   ],
+    //   link: {
+    //     url: "https://www.ianabecasis.com",
+    //     target: "_blank"
+    //   },
+    // },
     {
-      year: "Soon",
-      client: "Ian Abecasis",
+      year: "2026",
+      client: "León Romero",
       services: [
-        "Web",
         "Code",
-        "@verosantana__",
       ],
       hideImage: true,
       media: [
-        { type: "video", src: "images/ianabecasis_1.webm", poster: "images/ianabecasis_1.webp" },
+        { type: "video", src: "images/leonromero.webm", poster: "images/leonromero.webp" },
       ],
       link: {
         url: "https://www.ianabecasis.com",
         target: "_blank"
       },
-    },
-    {
-      year: "Soon",
-      client: "Bofirax",
-      services: [
-        "Creative direction",
-        "Art direction",
-        "Graphic design",
-        "Vinyl",
-      ],
-      media: [
-        { type: "image", src: "images/bofirax_2.webp" },
-        { type: "image", src: "images/bofirax_1.webp" },
-        { type: "image", src: "images/bofirax_3.webp" },
-      ],
     },
     {
       year: "2026",
@@ -74,6 +74,21 @@ const content = {
         { type: "image", src: "images/lamanso_3.webp" },
         { type: "image", src: "images/lamanso_5.webp" },
         // { type: "image", src: "images/lamanso_7.webp" },
+      ],
+    },
+    {
+      year: "2026",
+      client: "Bofirax",
+      services: [
+        "Creative direction",
+        "Art direction",
+        "Graphic design",
+        "Vinyl",
+      ],
+      media: [
+        { type: "image", src: "images/bofirax_2.webp" },
+        { type: "image", src: "images/bofirax_1.webp" },
+        { type: "image", src: "images/bofirax_3.webp" },
       ],
     },
     {

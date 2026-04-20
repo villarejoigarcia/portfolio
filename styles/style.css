@@ -153,6 +153,7 @@ header {
 	z-index: 99;
 	width: fit-content;
 	padding: 8px;
+	width: 100vw;
 }
 
 header h3 {
