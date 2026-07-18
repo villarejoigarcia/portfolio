@@ -76,24 +76,24 @@ const content = {
         // { type: "image", src: "images/lamanso_7.webp" },
       ],
     },
-    // {
-    //   year: "2026",
-    //   client: "P.A.R",
-    //   services: [
-    //     "Motion",
-    //   ],
-    //   media: [
-    //     { type: "video", src: "images/orgull_1.webm" },
-    //     { type: "video", src: "images/orgull_2.webm" },
-    //     { type: "video", src: "images/orgull_3.webm" },
-    //     { type: "video", src: "images/orgull_4.webm" },
-    //     { type: "video", src: "images/orgull_5.webm" },
-    //     { type: "video", src: "images/orgull_6.webm" },
-    //     { type: "video", src: "images/orgull_7.webm" },
-    //     { type: "video", src: "images/orgull_8.webm" },
-    //     { type: "video", src: "images/orgull_9.webm" },
-    //   ],
-    // },
+    {
+      year: "2026",
+      client: "P.A.R",
+      services: [
+        "Motion",
+      ],
+      media: [
+        { type: "video", src: "images/orgull_1.webm" },
+        { type: "video", src: "images/orgull_2.webm" },
+        { type: "video", src: "images/orgull_3.webm" },
+        { type: "video", src: "images/orgull_4.webm" },
+        { type: "video", src: "images/orgull_5.webm" },
+        { type: "video", src: "images/orgull_6.webm" },
+        { type: "video", src: "images/orgull_7.webm" },
+        { type: "video", src: "images/orgull_8.webm" },
+        { type: "video", src: "images/orgull_9.webm" },
+      ],
+    },
     {
       year: "2025",
       client: "Ester G. Mera",

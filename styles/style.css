@@ -316,7 +316,8 @@ body::-webkit-scrollbar {
 	video {
 		display: block;
 		width: auto;
-		max-height: 100dvh;
+		height: auto;
+		max-height: initial;
 		max-width: 100%;
 	}
 
