@@ -16,7 +16,7 @@ img,
 video {
 	display: block;
 	width: auto;
-	max-height: calc(66.666vh - 3px*2);
+	height: calc(66.666vh - 3px*2);
 	max-width: 100%;
 }
 
@@ -314,10 +314,7 @@ body::-webkit-scrollbar {
 
 	img,
 	video {
-		display: block;
-		width: auto;
 		height: auto;
-		max-height: initial;
 		max-width: 100%;
 	}
 
