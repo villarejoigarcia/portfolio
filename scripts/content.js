@@ -78,17 +78,20 @@ const content = {
     },
     {
       year: "2026",
-      client: "Bofirax",
+      client: "P.A.R",
       services: [
-        "Creative direction",
-        "Art direction",
-        "Graphic design",
-        "Vinyl",
+        "Motion",
       ],
       media: [
-        { type: "image", src: "images/bofirax_2.webp" },
-        { type: "image", src: "images/bofirax_1.webp" },
-        { type: "image", src: "images/bofirax_3.webp" },
+        { type: "video", src: "images/orgull_1.webm", poster: "" },
+        { type: "video", src: "images/orgull_2.webm", poster: "" },
+        { type: "video", src: "images/orgull_3.webm", poster: "" },
+        { type: "video", src: "images/orgull_4.webm", poster: "" },
+        { type: "video", src: "images/orgull_5.webm", poster: "" },
+        { type: "video", src: "images/orgull_6.webm", poster: "" },
+        { type: "video", src: "images/orgull_7.webm", poster: "" },
+        { type: "video", src: "images/orgull_8.webm", poster: "" },
+        { type: "video", src: "images/orgull_9.webm", poster: "" },
       ],
     },
     {
@@ -134,6 +137,21 @@ const content = {
         { type: "image", src: "images/villarejoigarcia_antex_15.webp" },
         { type: "image", src: "images/villarejoigarcia_antex_16.webp" }
       ]
+    },
+    {
+      year: "2026",
+      client: "Bofirax",
+      services: [
+        "Creative direction",
+        "Art direction",
+        "Graphic design",
+        "Vinyl",
+      ],
+      media: [
+        { type: "image", src: "images/bofirax_2.webp" },
+        { type: "image", src: "images/bofirax_1.webp" },
+        { type: "image", src: "images/bofirax_3.webp" },
+      ],
     },
     {
       year: "2025",
