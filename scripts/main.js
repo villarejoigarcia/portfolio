@@ -634,7 +634,7 @@ $('.data').hover(
       }
 
       // animateCreditsHide(activeIndex, true);
-    }, len * animationDelay + 50);
+    }, len * animationDelay + animationDelay*2);
       animateCreditsHide(activeIndex, true);
 
   },
@@ -673,7 +673,7 @@ $('.data').hover(
         animateCreditsShow(activeIndex);
 
       }
-    }, len * animationDelay + 50); 
+    }, len * animationDelay + animationDelay*2); 
     // }, len * animationDelay); 
 
 
