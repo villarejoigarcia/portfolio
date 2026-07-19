@@ -51,6 +51,9 @@ const content = {
       services: [
         "Code",
       ],
+      credits: [
+        "Web by León Romero",
+      ],
       hideImage: true,
       media: [
         { type: "video", src: "images/leonromero.webm", poster: "images/leonromero.webp" },
@@ -82,6 +85,9 @@ const content = {
       services: [
         "Motion",
       ],
+      credits: [
+        "Campaign by P.A.R",
+      ],
       media: [
         { type: "video", src: "images/orgull_1.webm" },
         { type: "video", src: "images/orgull_2.webm" },
@@ -96,28 +102,18 @@ const content = {
     },
     {
       year: "2025",
-      client: "Ester G. Mera",
-      services: [
-        "Web",
-        "Code",
-        "@polsolabg",
-      ],
-      hideImage: true,
-      media: [
-        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
-      ],
-      link: {
-        url: "https://www.estergmera.com",
-        target: "_blank"
-      },
-    },
-    {
-      year: "2025",
       client: "Antex",
       services: [
         "Creative direction",
         "Art direction",
-        "Production"
+        "Production",
+      ],
+      credits: [
+        "Set by Ricard Serarols",
+        "Photo by Manel Cano",
+        "Set assist by Jazmín Giudici",
+        "Photo assist by Oriol Puchol",
+        "Retouch by Paula Ibañez",
       ],
       media: [
         { type: "image", src: "images/villarejoigarcia_antex_1.webp" },
@@ -139,6 +135,24 @@ const content = {
       ]
     },
     {
+      year: "2025",
+      client: "Ester G. Mera",
+      services: [
+        "Code",
+      ],
+      credits: [
+        "Web by Pol Solà",
+      ],
+      hideImage: true,
+      media: [
+        { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
+      ],
+      link: {
+        url: "https://www.estergmera.com",
+        target: "_blank"
+      },
+    },
+    {
       year: "2026",
       client: "Bofirax",
       services: [
@@ -146,6 +160,10 @@ const content = {
         "Art direction",
         "Graphic design",
         "Vinyl",
+      ],
+      credits: [
+        "with Ricard Serarols",
+        "Photo by Pol Rebaque",
       ],
       media: [
         { type: "image", src: "images/bofirax_2.webp" },
@@ -159,7 +177,9 @@ const content = {
       services: [
         "Web",
         "Code",
-        "@alfredllorca_",
+      ],
+      credits: [
+        "Web by Alfred Llorca",
       ],
       media: [
         { type: "video", src: "images/carmenhouse_full.webm", poster: "images/carmenhouse_1.webp"},
@@ -222,7 +242,7 @@ const content = {
     },
     {
       year: "2024",
-      client: "Guillem Marí",
+      client: "Les Mònades",
       services: [
         "Editorial",
         "Identity"
@@ -317,18 +337,18 @@ const content = {
     //     { type: "image", src: "images/axvgarcia_ianabecasis_4.webp", srcMobile: "images/axvgarcia_ianabecasis_4_1080.webp" }
     //   ]
     // },
-    {
-      year: "2023",
-      client: "Festa Major de Mussa",
-      services: [
-        "Graphic design"
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_festamajordemussa_1.gif", srcMobile: "images/axvgarcia_festamajordemussa_1_1080.gif" },
-        { type: "image", src: "images/axvgarcia_festamajordemussa_2.webp", srcMobile: "images/axvgarcia_festamajordemussa_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_festamajordemussa_3.webp", srcMobile: "images/axvgarcia_festamajordemussa_3_1080.webp" }
-      ]
-    },
+    // {
+    //   year: "2023",
+    //   client: "Festa Major de Mussa",
+    //   services: [
+    //     "Graphic design"
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_festamajordemussa_1.gif", srcMobile: "images/axvgarcia_festamajordemussa_1_1080.gif" },
+    //     { type: "image", src: "images/axvgarcia_festamajordemussa_2.webp", srcMobile: "images/axvgarcia_festamajordemussa_2_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_festamajordemussa_3.webp", srcMobile: "images/axvgarcia_festamajordemussa_3_1080.webp" }
+    //   ]
+    // },
     // {
     //   year: "2023",
     //   client: "El Cortal del Gral",
@@ -372,10 +392,11 @@ const content = {
         "Identity",
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_entorns_1.webp", srcMobile: "images/axvgarcia_entorns_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_2.gif", srcMobile: "images/axvgarcia_entorns_2_1080.gif" },
         { type: "image", src: "images/axvgarcia_entorns_3.webp", srcMobile: "images/axvgarcia_entorns_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_entorns_4.webp", srcMobile: "images/axvgarcia_entorns_4_1080.webp" },
+        { type: "image", src: "images/axvgarcia_entorns_1.webp", srcMobile: "images/axvgarcia_entorns_1_1080.webp" },
+        { type: "image", src: "images/entorns_2.webp"},
+        // { type: "image", src: "images/axvgarcia_entorns_2.gif", srcMobile: "images/axvgarcia_entorns_2_1080.gif" },
+        // { type: "image", src: "images/axvgarcia_entorns_4.webp", srcMobile: "images/axvgarcia_entorns_4_1080.webp" },
       ]
     },
     {

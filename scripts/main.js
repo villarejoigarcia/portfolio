@@ -186,9 +186,29 @@ $(document).ready(function () {
 
     $slideIndex.append($div);
   });
+
+  // credits
+
+  const $credits = $('.credits');
+  $credits.empty();
+  c.projects.forEach(project => {
+    const credits = project.credits || [];
+    const $projectCredits = $('<div>').addClass('project-credits');
+
+    if (credits.length > 0) {
+      $projectCredits.append($('<h2>').text('credits'));
+      credits.forEach(credit => {
+        $projectCredits.append($('<h1>').addClass('indent').append($('<em>').text(`${credit}`)));
+      });
+    }
+
+    $credits.append($projectCredits);
+  });
+  
 });
 
 const animationDelay = 50;
+const revealDelay = 666;
 
 // variables
 let isIndexAnimating = false;
@@ -196,6 +216,8 @@ let isDataHovering = false;
 let lastActiveIndex = -1;
 let hoverTimeouts = [];
 let infoTimeouts = [];
+let creditsTimeouts = [];
+let slideIndexTimeouts = [];
 let clonesAdded = false;
 let isInformationAnimating = false;
 let pendingInformationUpdate = null;
@@ -218,6 +240,55 @@ function shuffleLetters() {
   $h1.find('span').each(function () {
     const randomOffset = Math.random() < 0.5 ? '0em' : '-1.2em';
     $(this).css('transform', `translateY(${randomOffset})`);
+  });
+}
+
+function animateCreditsHide(index, reverse = false) {
+  const $projectCredits = $('.credits .project-credits').eq(index);
+  const $creditsChildren = $projectCredits.children();
+  const len = $creditsChildren.length;
+
+  if (len === 0) return;
+
+  creditsTimeouts.forEach(clearTimeout);
+  creditsTimeouts = [];
+
+  $creditsChildren.each(function (i) {
+    const idx = reverse ? (len - 1 - i) : i;
+    const t = setTimeout(function () {
+      $($creditsChildren[idx]).hide();
+    }, i * animationDelay);
+    creditsTimeouts.push(t);
+  });
+
+  const hideContainerTimeout = setTimeout(function () {
+    $projectCredits.hide();
+  }, len * animationDelay);
+  creditsTimeouts.push(hideContainerTimeout);
+}
+
+function animateCreditsShow(index) {
+  const $projectCredits = $('.credits .project-credits').eq(index);
+  const $creditsChildren = $projectCredits.children();
+
+  creditsTimeouts.forEach(clearTimeout);
+  creditsTimeouts = [];
+
+  $('.credits .project-credits').not($projectCredits).hide().children().hide();
+
+  if ($creditsChildren.length === 0) {
+    $projectCredits.hide();
+    return;
+  }
+
+  $projectCredits.show();
+  $creditsChildren.hide();
+
+  $creditsChildren.each(function (i, el) {
+    const t = setTimeout(function () {
+      $(el).show();
+    }, i * animationDelay);
+    creditsTimeouts.push(t);
   });
 }
 
@@ -258,13 +329,15 @@ $(function () {
 
   $('.slide').click(function () {
     const video = $(this).find('video').first().get(0);
-    const mediaItems = $slide.find('.media').children();
-    video.muted = true;
-    video.playsInline = true;
-    video.play().catch(() => { });
-    if ($mediaItems.length > 1) {
-    video.currentTime = 0;
-    video.pause();
+    const mediaItems = $('.slide').find('.media').children();
+    if (video) {
+      video.muted = true;
+      video.playsInline = true;
+      video.play().catch(() => { });
+      if (mediaItems.length > 1) {
+        video.currentTime = 0;
+        video.pause();
+      }
     }
   });
 
@@ -344,8 +417,16 @@ function showActiveSlideIndex(activeIndex) {
   let items = $('#slide-index > div');
   let len = items.length;
   let hideTimeouts = [];
+  let creditsItems = $('.credits .project-credits');
 
   const indexChanged = lastActiveIndex !== activeIndex;
+
+  if (!indexChanged && lastActiveIndex !== -1) {
+    return;
+  }
+
+  slideIndexTimeouts.forEach(clearTimeout);
+  slideIndexTimeouts = [];
   
   if (indexChanged && lastActiveIndex !== -1) {
     const $previousMoreChildren = items.eq(lastActiveIndex).find('.more').children();
@@ -356,9 +437,10 @@ function showActiveSlideIndex(activeIndex) {
       
       $previousMoreChildren.each(function (i, el) {
         const idx = moreLen - 1 - i;
-        setTimeout(function () {
+        const t = setTimeout(function () {
           $($previousMoreChildren[idx]).hide();
         }, i * animationDelay);
+        slideIndexTimeouts.push(t);
       });
     }
     
@@ -368,6 +450,17 @@ function showActiveSlideIndex(activeIndex) {
         $(this).find('.multiple').removeClass('hide-after');
       }
     });
+
+    animateCreditsHide(lastActiveIndex, true);
+
+    // creditsItems.each(function (i) {
+    //   if (i !== activeIndex && i !== lastActiveIndex) {
+    //     $(this).hide().children().hide();
+    //   }
+    // });
+
+    creditsItems.hide();
+
   }
   
   lastActiveIndex = activeIndex;
@@ -385,7 +478,7 @@ function showActiveSlideIndex(activeIndex) {
           hideTimeouts.push(t);
         }
       });
-      setTimeout(function () {
+      const showActiveTimeout = setTimeout(function () {
         items.eq(activeIndex).show().addClass('active');
         items.not(':eq(' + activeIndex + ')').removeClass('active');
         isIndexAnimating = false;
@@ -393,19 +486,23 @@ function showActiveSlideIndex(activeIndex) {
           shuffleLetters();
         }
         
-        setTimeout(function() {
+        const showChildrenTimeout = setTimeout(function() {
           const $activeMoreChildren = items.eq(activeIndex).find('.more').children();
           if ($activeMoreChildren.length > 0) {
             items.eq(activeIndex).find('.multiple').addClass('hide-after');
           }
           $activeMoreChildren.each(function (i, el) {
-            setTimeout(function () {
+            const t = setTimeout(function () {
               $(el).show();
             }, i * animationDelay);
+            slideIndexTimeouts.push(t);
           });
-        }, 666);
+          animateCreditsShow(activeIndex);
+        }, revealDelay);
+        slideIndexTimeouts.push(showChildrenTimeout);
         
       }, len * animationDelay);
+      slideIndexTimeouts.push(showActiveTimeout);
     } else {
       items.each(function(i) {
         if (i !== activeIndex) {
@@ -420,17 +517,21 @@ function showActiveSlideIndex(activeIndex) {
         shuffleLetters();
       }
       
-      setTimeout(function() {
+      const showChildrenTimeout = setTimeout(function() {
         const $activeMoreChildren = items.eq(activeIndex).find('.more').children();
         if ($activeMoreChildren.length > 0) {
           items.eq(activeIndex).find('.multiple').addClass('hide-after');
         }
         $activeMoreChildren.each(function (i, el) {
-          setTimeout(function () {
+          const t = setTimeout(function () {
             $(el).show();
           }, i * animationDelay);
+          slideIndexTimeouts.push(t);
         });
-      }, 666);
+
+        animateCreditsShow(activeIndex);
+      }, revealDelay);
+      slideIndexTimeouts.push(showChildrenTimeout);
     }
   }
 }
@@ -442,7 +543,7 @@ $(document).on('mouseenter', 'header', function () {
 $(document).on('mouseleave', 'header', function () {
     setTimeout(() => { 
       $(this).find('.multiple').removeClass('hide-after'); 
-    }, 666);
+    }, revealDelay);
     
 });
 
@@ -531,7 +632,11 @@ $('.data').hover(
       } else {
         activeItem.find('.multiple').removeClass('hide-after');
       }
+
+      // animateCreditsHide(activeIndex, true);
     }, len * animationDelay + 66);
+      animateCreditsHide(activeIndex, true);
+
   },
   function () {
     isDataHovering = false;
@@ -564,8 +669,20 @@ $('.data').hover(
             $(el).show();
           }, i * animationDelay);
         });
+
+        // animateCreditsShow(activeIndex);
+
       }
-    }, len * animationDelay + 666); 
+    // }, len * animationDelay + revealDelay); 
+    }, len * animationDelay); 
+
+
+    setTimeout(function () {
+      if (!isDataHovering) {
+        animateCreditsShow(activeIndex);
+      }
+    }, len * animationDelay); 
+
   }
 );
 
@@ -724,7 +841,7 @@ $(document).ready(function () {
   setTimeout(function () {
     showActiveSlideIndex(0);
     hideInformationAnimated();
-  }, 666);
+  }, revealDelay);
 });
 
 // multiple
