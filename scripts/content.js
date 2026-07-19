@@ -178,7 +178,6 @@ const content = {
         { type: "image", src: "images/bofirax_6.webp" },
         { type: "image", src: "images/bofirax_7.webp" },
         { type: "image", src: "images/bofirax_8.webp" },
-        { type: "image", src: "images/bofirax_9.webp" },
       ],
     },
     {
