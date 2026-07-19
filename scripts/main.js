@@ -634,7 +634,7 @@ $('.data').hover(
       }
 
       // animateCreditsHide(activeIndex, true);
-    }, len * animationDelay + 66);
+    }, len * animationDelay + 50);
       animateCreditsHide(activeIndex, true);
 
   },
@@ -670,18 +670,18 @@ $('.data').hover(
           }, i * animationDelay);
         });
 
-        // animateCreditsShow(activeIndex);
-
-      }
-    // }, len * animationDelay + revealDelay); 
-    }, len * animationDelay); 
-
-
-    setTimeout(function () {
-      if (!isDataHovering) {
         animateCreditsShow(activeIndex);
+
       }
-    }, len * animationDelay); 
+    }, len * animationDelay + 50); 
+    // }, len * animationDelay); 
+
+
+    // setTimeout(function () {
+    //   if (!isDataHovering) {
+    //     animateCreditsShow(activeIndex);
+    //   }
+    // }, len * animationDelay); 
 
   }
 );

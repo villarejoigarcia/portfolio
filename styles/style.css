@@ -307,9 +307,10 @@ body::-webkit-scrollbar {
 
 .credits {
 	position: fixed;
-	top: 50dvh;
-	left: 33.333vw;
-	/* display: none; */
+	/* top: 50dvh;
+	left: 33.333vw; */
+	top: 75dvh;
+	left: 8px;
 }
 
 /*responsive*/
@@ -349,7 +350,6 @@ body::-webkit-scrollbar {
 	}
 
 	.credits {
-		position: fixed;
 		top: 75dvh;
 		left: 8px;
 	}
