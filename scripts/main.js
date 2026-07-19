@@ -37,6 +37,12 @@ $(document).ready(function () {
   c.projects.forEach((project, i) => {
     const $slide = $('<div>').addClass('slide').attr('data-index', i);
     const $media = $('<div>').addClass('media');
+    const mediaCount = Array.isArray(project.media) ? project.media.length : 0;
+
+    if (mediaCount <= 1) {
+      $slide.addClass('single-item');
+    }
+
     project.media && project.media.forEach(m => {
       if (m.type === 'image') {
         if (m.srcMobile) {
@@ -329,7 +335,7 @@ $(function () {
 
   $('.slide').click(function () {
     const video = $(this).find('video').first().get(0);
-    const mediaItems = $('.slide').find('.media').children();
+    const mediaItems = $(this).find('.media').children();
     if (video) {
       video.muted = true;
       video.playsInline = true;
@@ -634,7 +640,7 @@ $('.data').hover(
       }
 
       // animateCreditsHide(activeIndex, true);
-    }, len * animationDelay + animationDelay*2);
+    }, len * animationDelay + animationDelay);
       animateCreditsHide(activeIndex, true);
 
   },
@@ -673,7 +679,7 @@ $('.data').hover(
         animateCreditsShow(activeIndex);
 
       }
-    }, len * animationDelay + animationDelay*2); 
+    }, len * animationDelay + animationDelay); 
     // }, len * animationDelay); 
 
 

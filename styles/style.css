@@ -271,6 +271,10 @@ body::-webkit-scrollbar {
 	cursor: e-resize;
 }
 
+.slide.single-item {
+	cursor: default;
+}
+
 /* .slide[data-index="1"] .media {
 	overflow: hidden;
 }

@@ -164,11 +164,21 @@ const content = {
       credits: [
         "with Ricard Serarols",
         "Photo by Pol Rebaque",
+        "Stage by Ricard Serarols",
+        "Lights by Mercè Lledós",
+        "Costume by Crypta",
+        "Live photo by Júlia Girós",
       ],
       media: [
-        { type: "image", src: "images/bofirax_2.webp" },
         { type: "image", src: "images/bofirax_1.webp" },
+        { type: "image", src: "images/bofirax_2.webp" },
         { type: "image", src: "images/bofirax_3.webp" },
+        { type: "image", src: "images/bofirax_4.webp" },
+        { type: "image", src: "images/bofirax_5.webp" },
+        { type: "image", src: "images/bofirax_6.webp" },
+        { type: "image", src: "images/bofirax_7.webp" },
+        { type: "image", src: "images/bofirax_8.webp" },
+        { type: "image", src: "images/bofirax_9.webp" },
       ],
     },
     {
