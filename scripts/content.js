@@ -1,6 +1,6 @@
 const content = {
   header: {
-    lastUpdate: "Last update: Apr. 20, 2026",
+    lastUpdate: "Last update: Jul. 20, 2026",
     information: "information",
     name: "Alex Villarejo i Garcia",
     description: "Creative and artistic interpretations",
@@ -287,20 +287,20 @@ const content = {
         target: "_blank"
       },
     },
-    {
-      year: "2023",
-      client: "Mariana També",
-      services: [
-        "Cover artwork",
-        "Graphic design",
-      ],
-      media: [
-        { type: "image", src: "images/axvgarcia_marianatambe_1.webp", srcMobile: "images/axvgarcia_marianatambe_1_1080.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_2.webp", srcMobile: "images/axvgarcia_marianatambe_2_1080.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_3.webp", srcMobile: "images/axvgarcia_marianatambe_3_1080.webp" },
-        { type: "image", src: "images/axvgarcia_marianatambe_4.webp", srcMobile: "images/axvgarcia_marianatambe_4_1080.webp" }
-      ]
-    },
+    // {
+    //   year: "2023",
+    //   client: "Mariana També",
+    //   services: [
+    //     "Cover artwork",
+    //     "Graphic design",
+    //   ],
+    //   media: [
+    //     { type: "image", src: "images/axvgarcia_marianatambe_1.webp", srcMobile: "images/axvgarcia_marianatambe_1_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_marianatambe_2.webp", srcMobile: "images/axvgarcia_marianatambe_2_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_marianatambe_3.webp", srcMobile: "images/axvgarcia_marianatambe_3_1080.webp" },
+    //     { type: "image", src: "images/axvgarcia_marianatambe_4.webp", srcMobile: "images/axvgarcia_marianatambe_4_1080.webp" }
+    //   ]
+    // },
     // {
     //   year: "2023",
     //   client: "Ian Abecasis",
