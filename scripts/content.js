@@ -407,7 +407,7 @@ const content = {
         { type: "image", src: "images/entorns_2.webp"},
         { type: "image", src: "images/entorns_4.webp"},
         { type: "image", src: "images/entorns_5.webp"},
-        { type: "image", src: "images/entorns_6.webp"},
+        // { type: "image", src: "images/entorns_6.webp"},
         // { type: "image", src: "images/entorns_3.webp"},
         // { type: "image", src: "images/axvgarcia_entorns_2.gif", srcMobile: "images/axvgarcia_entorns_2_1080.gif" },
         // { type: "image", src: "images/axvgarcia_entorns_4.webp", srcMobile: "images/axvgarcia_entorns_4_1080.webp" },
