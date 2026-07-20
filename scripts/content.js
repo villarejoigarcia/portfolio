@@ -222,8 +222,10 @@ const content = {
         "Graphic design"
       ],
       media: [
-        { type: "image", src: "images/axvgarcia_gigiros_6.webp" },
-        { type: "image", src: "images/axvgarcia_gigiros_3.webp" },
+        // { type: "image", src: "images/axvgarcia_gigiros_6.webp" },
+        // { type: "image", src: "images/axvgarcia_gigiros_3.webp" },
+        { type: "image", src: "images/gigiros_1.webp" },
+        { type: "image", src: "images/gigiros_2.webp" },
         { type: "image", src: "images/axvgarcia_gigiros_7.webp" },
         { type: "image", src: "images/axvgarcia_gigiros_4.webp" },
         { type: "image", src: "images/axvgarcia_gigiros_5.webp" },
