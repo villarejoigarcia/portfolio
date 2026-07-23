@@ -146,6 +146,8 @@ const content = {
       hideImage: true,
       media: [
         { type: "video", src: "images/estergmera_1.webm", poster: "images/estergmera_1.webp" },
+        { type: "video", src: "images/estergmera_2.webm"},
+        { type: "video", src: "images/estergmera_3.webm" },
       ],
       link: {
         url: "https://www.estergmera.com",
@@ -197,6 +199,17 @@ const content = {
         url: "https://www.carmenhouse.com",
         target: "_blank"
       },
+    },
+    {
+      year: "2025",
+      client: "Gigi Ros",
+      services: [
+        "Motion",
+      ],
+      media: [
+        { type: "video", src: "images/gigiros_kamikaze_1.webm", },
+        { type: "video", src: "images/gigiros_kamikaze_2.webm" },
+      ]
     },
     {
       year: "2025",

@@ -408,7 +408,7 @@ $(function () {
     for (let i = 0; i < randomScrollIndex; i++) {
       scrollTo += $slides.eq(i).outerHeight(true);
     }
-    console.log('Scroll to:', scrollTo);
+    // console.log('Scroll to:', scrollTo);
     $container.scrollTop(scrollTo);
 
     setTimeout(function () {
