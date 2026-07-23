@@ -200,17 +200,17 @@ const content = {
         target: "_blank"
       },
     },
-    {
-      year: "2025",
-      client: "Gigi Ros",
-      services: [
-        "Motion",
-      ],
-      media: [
-        { type: "video", src: "images/gigiros_kamikaze_1.webm", },
-        { type: "video", src: "images/gigiros_kamikaze_2.webm" },
-      ]
-    },
+    // {
+    //   year: "2025",
+    //   client: "Gigi Ros",
+    //   services: [
+    //     "Motion",
+    //   ],
+    //   media: [
+    //     { type: "video", src: "images/gigiros_kamikaze_1.webm", },
+    //     { type: "video", src: "images/gigiros_kamikaze_2.webm" },
+    //   ]
+    // },
     {
       year: "2025",
       client: "Gigi Ros",
