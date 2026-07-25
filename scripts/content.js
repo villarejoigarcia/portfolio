@@ -53,6 +53,7 @@ const content = {
       ],
       credits: [
         "Web by León Romero",
+        "Featured on Klikkentheke",
       ],
       hideImage: true,
       media: [
@@ -101,6 +102,30 @@ const content = {
       ],
     },
     {
+      year: "2026",
+      client: "Macarena Pozzuto",
+      services: [
+        "Web",
+        "Code",
+      ],
+      credits: [
+        "Web by Macarena Pozzuto",
+        "Featured on Klikkentheke",
+      ],
+      link: {
+        url: "https://www.macarenapozzuto.com",
+        target: "_blank"
+      },
+      media: [
+        { type: "video", src: "images/macarenapozzuto_1.webm" },
+        { type: "video", src: "images/macarenapozzuto_2.webm" },
+        { type: "video", src: "images/macarenapozzuto_3.webm" },
+        { type: "video", src: "images/macarenapozzuto_4.webm" },
+        { type: "video", src: "images/macarenapozzuto_5.webm" },
+
+      ],
+    },
+    {
       year: "2025",
       client: "Antex",
       services: [
@@ -142,6 +167,7 @@ const content = {
       ],
       credits: [
         "Web by Pol Solà",
+        "Featured on Klikkentheke",
       ],
       hideImage: true,
       media: [
