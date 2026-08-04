@@ -118,8 +118,8 @@ const content = {
       },
       media: [
         { type: "video", src: "images/macarenapozzuto_1.webm" },
-        { type: "video", src: "images/macarenapozzuto_2.webm" },
-        { type: "video", src: "images/macarenapozzuto_3.webm" },
+        // { type: "video", src: "images/macarenapozzuto_2.webm" },
+        // { type: "video", src: "images/macarenapozzuto_3.webm" },
         { type: "video", src: "images/macarenapozzuto_4.webm" },
         { type: "video", src: "images/macarenapozzuto_5.webm" },
 
