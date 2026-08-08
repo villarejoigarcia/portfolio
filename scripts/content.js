@@ -82,6 +82,21 @@ const content = {
     },
     {
       year: "2026",
+      client: "La Manso",
+      services: [
+        "Graphic design",
+      ],
+      media: [
+        { type: "video", src: "images/lamanso_vinilo_1.webm" },
+        { type: "image", src: "images/lamanso_vinilo_2.webp" },
+        { type: "image", src: "images/lamanso_vinilo_3.webp" },
+        { type: "video", src: "images/lamanso_vinilo_4.webm" },
+        { type: "image", src: "images/lamanso_vinilo_5.webp" },
+        { type: "image", src: "images/lamanso_vinilo_6.webp" },
+      ],
+    },
+    {
+      year: "2026",
       client: "P.A.R",
       services: [
         "Motion",
