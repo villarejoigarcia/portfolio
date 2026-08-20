@@ -38,7 +38,12 @@ const content = {
       ],
       hideImage: true,
       media: [
-        { type: "video", src: "images/ianabecasis_1.webm" },
+        { type: "video", src: "images/ianabecasis_social_1.webm" },
+        { type: "video", src: "images/ianabecasis_social_2.webm" },
+        { type: "video", src: "images/ianabecasis_social_3.webm" },
+        { type: "image", src: "images/ianabecasis_social_5.webp" },
+        { type: "image", src: "images/ianabecasis_social_6.webp" },
+        { type: "image", src: "images/ianabecasis_social_7.webp" },
       ],
       link: {
         url: "https://www.ianabecasis.com",
