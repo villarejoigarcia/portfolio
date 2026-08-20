@@ -63,7 +63,6 @@ const content = {
         { type: "image", src: "images/lamanso_4.webp" },
         { type: "image", src: "images/lamanso_3.webp" },
         { type: "image", src: "images/lamanso_5.webp" },
-        // { type: "image", src: "images/lamanso_7.webp" },
       ],
     },
     {
