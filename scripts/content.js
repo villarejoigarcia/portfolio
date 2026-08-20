@@ -28,39 +28,20 @@ const content = {
     services: "services"
   },
   projects: [
-    // {
-    //   year: "Soon",
-    //   client: "Ian Abecasis",
-    //   services: [
-    //     "Web",
-    //     "Code",
-    //     "@verosantana__",
-    //   ],
-    //   hideImage: true,
-    //   media: [
-    //     { type: "video", src: "images/ianabecasis_1.webm", poster: "images/ianabecasis_1.webp" },
-    //   ],
-    //   link: {
-    //     url: "https://www.ianabecasis.com",
-    //     target: "_blank"
-    //   },
-    // },
     {
       year: "2026",
-      client: "León Romero",
+      client: "Ian Abecasis",
       services: [
+        "Identity",
+        "Web",
         "Code",
-      ],
-      credits: [
-        "Web by León Romero",
-        "Featured on Klikkentheke",
       ],
       hideImage: true,
       media: [
-        { type: "video", src: "images/leonromero.webm", poster: "images/leonromero.webp" },
+        { type: "video", src: "images/ianabecasis_1.webm" },
       ],
       link: {
-        url: "https://www.leonromero.work",
+        url: "https://www.ianabecasis.com",
         target: "_blank"
       },
     },
@@ -94,6 +75,25 @@ const content = {
         { type: "image", src: "images/lamanso_vinilo_5.webp" },
         { type: "image", src: "images/lamanso_vinilo_6.webp" },
       ],
+    },
+    {
+      year: "2026",
+      client: "León Romero",
+      services: [
+        "Code",
+      ],
+      credits: [
+        "Web by León Romero",
+        "Featured on Klikkentheke",
+      ],
+      hideImage: true,
+      media: [
+        { type: "video", src: "images/leonromero.webm", poster: "images/leonromero.webp" },
+      ],
+      link: {
+        url: "https://www.leonromero.work",
+        target: "_blank"
+      },
     },
     {
       year: "2026",
